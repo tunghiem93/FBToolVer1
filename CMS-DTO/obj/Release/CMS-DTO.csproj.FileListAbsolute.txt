@@ -1,0 +1,21 @@
+D:\David\CMS-Web\CMS-DTO\bin\Release\CMS-DTO.dll
+D:\David\CMS-Web\CMS-DTO\bin\Release\CMS-DTO.pdb
+D:\David\CMS-Web\CMS-DTO\bin\Release\System.Web.Mvc.dll
+D:\David\CMS-Web\CMS-DTO\obj\Release\CMS-DTO.csprojResolveAssemblyReference.cache
+D:\David\CMS-Web\CMS-DTO\obj\Release\CMS-DTO.csproj.CoreCompileInputs.cache
+D:\David\CMS-Web\CMS-DTO\obj\Release\CMS-DTO.dll
+D:\David\CMS-Web\CMS-DTO\obj\Release\CMS-DTO.pdb
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\bin\Release\CMS-DTO.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\bin\Release\CMS-DTO.pdb
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\obj\Release\CMS-DTO.csprojAssemblyReference.cache
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\obj\Release\CMS-DTO.csproj.CoreCompileInputs.cache
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\obj\Release\CMS-DTO.csproj.CopyComplete
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\obj\Release\CMS-DTO.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-DTO\obj\Release\CMS-DTO.pdb
+D:\My Outsource\FBToolVer2\CMS-DTO\bin\Release\CMS-DTO.dll
+D:\My Outsource\FBToolVer2\CMS-DTO\bin\Release\CMS-DTO.pdb
+D:\My Outsource\FBToolVer2\CMS-DTO\obj\Release\CMS-DTO.csprojAssemblyReference.cache
+D:\My Outsource\FBToolVer2\CMS-DTO\obj\Release\CMS-DTO.csproj.CoreCompileInputs.cache
+D:\My Outsource\FBToolVer2\CMS-DTO\obj\Release\CMS-DTO.csproj.CopyComplete
+D:\My Outsource\FBToolVer2\CMS-DTO\obj\Release\CMS-DTO.dll
+D:\My Outsource\FBToolVer2\CMS-DTO\obj\Release\CMS-DTO.pdb

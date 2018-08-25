@@ -1,0 +1,532 @@
+2018-07-20 00:00:02,695- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start task 2
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:00:02,695- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start task 1
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:46,374- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/teemon/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:46,385- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:46,374- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/lifewithsunshine/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:46,403- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:47,081- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/teemon/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:47,093- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/teemon/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:50,766- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/lifewithsunshine/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:50,772- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/lifewithsunshine/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:50,801- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Awesome-T-shirt-150588258893142/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:50,808- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:50,816- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/LoveCoffeeus/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:50,823- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,304- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/LoveCoffeeus/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,331- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/LoveCoffeeus/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,336- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Awesome-T-shirt-150588258893142/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,425- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/pg/LoveCoffeeus/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,441- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,851- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=150588258893142 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,859- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,871- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Awesome-T-shirt-150588258893142/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,895- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/pg/LoveCoffeeus/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,907- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/pg/LoveCoffeeus/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,951- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Awesome-People-Are-Born-In-September-863456000490709/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:51,967- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,067- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/weapongun/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,083- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,488- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Awesome-People-Are-Born-In-September-863456000490709/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,560- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/weapongun/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,580- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/weapongun/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,652- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/The-Wonderful-Things-558485254545633/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:52,664- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,361- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=863456000490709 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,397- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,421- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Awesome-People-Are-Born-In-September-863456000490709/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,401- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/The-Wonderful-Things-558485254545633/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,493- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/pg/Nice-shirts-733319560081319/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,505- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,883- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=558485254545633 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,903- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,923- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/The-Wonderful-Things-558485254545633/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,979- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Teachers-Do-It-Better-281276808938791/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:58,991- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,035- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/pg/Nice-shirts-733319560081319/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,488- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Teachers-Do-It-Better-281276808938791/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,852- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=733319560081319 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,864- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,876- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/pg/Nice-shirts-733319560081319/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,904- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Doctor-Life-213807385884186/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:01:59,908- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:00,304- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=281276808938791 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:00,316- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:00,328- Thread:[67] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Teachers-Do-It-Better-281276808938791/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:00,388- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Doctor-Life-213807385884186/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:01,272- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=213807385884186 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:01,276- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:02:01,284- Thread:[74] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Doctor-Life-213807385884186/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:02,479- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start task 1
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:02,479- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start task 2
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:02,543- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/lifewithsunshine/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:02,563- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:02,563- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/teemon/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:02,591- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,072- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/lifewithsunshine/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,104- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/lifewithsunshine/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,104- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/teemon/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,136- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/teemon/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,156- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/LoveCoffeeus/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,164- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,172- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Awesome-T-shirt-150588258893142/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,180- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,578- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/LoveCoffeeus/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,598- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/LoveCoffeeus/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,682- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/pg/LoveCoffeeus/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,690- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:03,958- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Awesome-T-shirt-150588258893142/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:04,454- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=150588258893142 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:04,470- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:04,482- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Awesome-T-shirt-150588258893142/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:04,574- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Awesome-People-Are-Born-In-September-863456000490709/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:04,590- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:05,110- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Awesome-People-Are-Born-In-September-863456000490709/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:09,737- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=863456000490709 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:09,753- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:09,769- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Awesome-People-Are-Born-In-September-863456000490709/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:09,861- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/pg/Nice-shirts-733319560081319/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:09,877- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:10,369- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/pg/Nice-shirts-733319560081319/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:10,820- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=733319560081319 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:10,824- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:10,832- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/pg/Nice-shirts-733319560081319/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:10,864- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Doctor-Life-213807385884186/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:10,872- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:11,343- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Doctor-Life-213807385884186/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:12,114- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=213807385884186 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:12,122- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:12,126- Thread:[56] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Doctor-Life-213807385884186/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:50,920- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/pg/LoveCoffeeus/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:50,932- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/pg/LoveCoffeeus/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:51,068- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/weapongun/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:51,072- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:51,878- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/weapongun/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:51,894- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/weapongun/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:51,982- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/The-Wonderful-Things-558485254545633/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:51,998- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:52,802- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/The-Wonderful-Things-558485254545633/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:53,258- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=558485254545633 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:53,274- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:53,290- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/The-Wonderful-Things-558485254545633/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:53,362- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Start Craw :https://www.facebook.com/Teachers-Do-It-Better-281276808938791/ads/?country=1&ref=page_internal
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:53,374- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Cookie : fr=0g932KaBNIHkPNSHd.AWUyWBwpX4_A_YKA4NhvmupYBkk.BbMcZu.uD.Fs5.0.0.BbOtXK.AWXncoeT; sb=NmI3W-ffluEtyFHleEWSjhBl; wd=1920x943; datr=NmI3WwtbosYtTwDtslqJtXZd; c_user=100003727776485; xs=136%3Au6XG_yUasjTeFQ%3A2%3A1530356294%3A6091%3A726; pl=n; spin=r.4066192_b.trunk_t.1530495666_s.1_v.2_; act=1530582591458%2F0; presence=EDvF3EtimeF1530582595EuserFA21B03727776485A2EstateFDutF1530582595488CEchFDp_5f1B03727776485F2ff
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:54,186- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl error : https://www.facebook.com/Teachers-Do-It-Better-281276808938791/ads/?country=1&ref=page_internal: 
+[ ------------------------------------------------------------------------------------------------ ]
+"The remote server returned an error: (403) Forbidden."
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:54,636- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Crawl next page error : https://www.facebook.com/pages/ads/more/?cursor=8&surface=www_page_ads&unit_count=8&country=1&dpr=1&__user=100003727776485&__a=1&__req=v&__be=1&__pc=PHASED%3ADEFAULT&__rev=4075583&__spin_r=4075583&__spin_b=trunk&__spin_t=1530846023&page_id=281276808938791 The remote server returned an error: (403) Forbidden.
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:54,656- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Total Pin master :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 00:30:54,672- Thread:[54] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> End Craw :https://www.facebook.com/Teachers-Do-It-Better-281276808938791/ads/?country=1&ref=page_internal :0
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 10:40:47,349- Thread:[42] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 10:40:47,612- Thread:[42] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 11:27:39,626- Thread:[92] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-20 11:27:39,706- Thread:[92] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+

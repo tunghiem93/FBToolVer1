@@ -1,0 +1,9 @@
+{ DateTime = 6/21/2018 9:51:52 AM, Msg = CrawlData: e81a3b40-750a-468c-98c7-2771288765f9 }
+{ DateTime = 6/21/2018 9:51:54 AM, Msg = ResponseCreateOrUpdatePin: e81a3b40-750a-468c-98c7-2771288765f9 }
+{ DateTime = 6/21/2018 9:51:54 AM, Msg = ResponseCrawlData: e81a3b40-750a-468c-98c7-2771288765f9 }
+{ DateTime = 7/4/2018 1:02:03 PM, Msg = ResponseCreateOrUpdatePin: 36ee132f-1ccc-4ea9-9d2e-3895c9e7e6f4 }
+{ DateTime = 7/4/2018 2:13:05 PM, Msg = ErrorCreateOrUpdatePin 36ee132f-1ccc-4ea9-9d2e-3895c9e7e6f4 
+Exception: System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at CMS_Shared.CMSEmployees.CMSPinFactory.CreateOrUpdate(List`1 lstPin, String KeyWordID, String createdBy, String& msg) in D:\My Outsource\FBToolVer2\CMS-Shared\CMSPins\CMSPinFactory.cs:line 56 }
+{ DateTime = 7/4/2018 2:13:05 PM, Msg = ResponseCreateOrUpdatePin: 36ee132f-1ccc-4ea9-9d2e-3895c9e7e6f4 }

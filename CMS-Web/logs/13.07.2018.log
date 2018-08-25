@@ -1,0 +1,180 @@
+2018-07-13 10:14:11,590- Thread:[6] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:17:41,519- Thread:[17] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:17:51,845- Thread:[6] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:19:35,913- Thread:[17] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:20:24,499- Thread:[6] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:22:08,575- Thread:[17] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.IO.IOException","Message":"Received an unexpected EOF or 0 bytes from the transport stream.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)\r\n   at System.IO.StreamReader.ReadBuffer()\r\n   at System.IO.StreamReader.ReadToEnd()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 451","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nRead\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.ConnectStream\nInt32 Read(Byte[], Int32, Int32)","HResult":-2146232800,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:23:05,149- Thread:[8] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 328","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:23:42,114- Thread:[6] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:24:01,048- Thread:[11] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:24:01,596- Thread:[28] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 328","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:26:50,175- Thread:[11] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:39:15,971- Thread:[18] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:40:56,041- Thread:[18] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:41:09,543- Thread:[18] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 446","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 10:42:14,673- Thread:[18] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:19:05,100- Thread:[18] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:24:07,914- Thread:[42] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:27:55,146- Thread:[42] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:49:32,398- Thread:[7] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:50:06,444- Thread:[7] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:54:13,033- Thread:[7] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 11:54:15,463- Thread:[7] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 12:19:13,246- Thread:[30] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 12:19:28,013- Thread:[30] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 12:21:42,750- Thread:[30] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 12:27:10,824- Thread:[30] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 12:27:11,324- Thread:[30] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Crawler Fb: 
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFb(String url, CMS_CrawlerModels& pins, String& _pageId)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 12:51:54,214- Thread:[20] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The operation has timed out","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 13:18:10,797- Thread:[54] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-13 13:22:50,280- Thread:[54] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote server returned an error: (404) Not Found.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin)","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+

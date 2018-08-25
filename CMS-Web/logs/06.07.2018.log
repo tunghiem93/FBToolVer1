@@ -1,0 +1,396 @@
+2018-07-06 09:43:11,200- Thread:[8] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 09:43:12,562- Thread:[8] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 09:43:37,842- Thread:[19] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.NullReferenceException","Message":"Object reference not set to an instance of an object.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at CMS_Shared.Utilities.CrawlerFbHelpers.findNode(String input, String key, Int32 start, String fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers.cs:line 176\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers.CrawlerFBDetail(String Url, String fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers.cs:line 159","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nfindNode\nCMS-Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\nCMS_Shared.Utilities.CrawlerFbHelpers\nVoid findNode(System.String, System.String, Int32, System.String, CMS_DTO.CMSCrawler.PinsModels ByRef)","HResult":-2147467261,"Source":"CMS-Shared","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 09:43:38,044- Thread:[19] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.Net.WebException","Message":"The remote name could not be resolved: 'www.facebook.comhttps'","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.HttpWebRequest.GetResponse()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers.CrawlerFBDetail(String Url, String fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers.cs:line 146","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nGetResponse\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.HttpWebRequest\nSystem.Net.WebResponse GetResponse()","HResult":-2146233079,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 09:43:38,517- Thread:[19] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.NullReferenceException","Message":"Object reference not set to an instance of an object.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at CMS_Shared.Utilities.CrawlerFbHelpers.findNode(String input, String key, Int32 start, String fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers.cs:line 176\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers.CrawlerFBDetail(String Url, String fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers.cs:line 159","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nfindNode\nCMS-Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\nCMS_Shared.Utilities.CrawlerFbHelpers\nVoid findNode(System.String, System.String, Int32, System.String, CMS_DTO.CMSCrawler.PinsModels ByRef)","HResult":-2147467261,"Source":"CMS-Shared","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 09:55:33,987- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 09:55:34,602- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 09:58:12,947- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 09:58:13,565- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:01:44,553- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:01:44,611- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:07:12,736- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:07:13,245- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:10:31,164- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:10:31,783- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:40:10,914- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:40:11,605- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:55:20,574- Thread:[12] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 10:55:21,110- Thread:[12] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 11:02:36,646- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 11:02:37,162- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:36:42,155- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:36:42,797- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:40:32,287- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:40:32,868- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:47:37,380- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:47:37,897- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:58:27,154- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 12:58:27,637- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 13:01:27,339- Thread:[15] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 13:01:27,833- Thread:[15] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 13:06:07,286- Thread:[13] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 13:06:07,347- Thread:[13] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 13:49:32,444- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 13:49:33,265- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 14:00:21,718- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 14:00:21,808- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 14:21:44,759- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 14:21:45,555- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 14:41:08,609- Thread:[12] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 14:41:08,690- Thread:[12] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:39,783- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:40,790- Thread:[11] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:50:43,233- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:43,310- Thread:[10] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:50:44,408- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:44,576- Thread:[10] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:50:45,211- Thread:[13] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:45,293- Thread:[13] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:50:47,585- Thread:[11] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:47,728- Thread:[11] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:50:53,202- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:50:53,350- Thread:[10] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:51:29,764- Thread:[13] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:51:29,947- Thread:[13] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:52:05,318- Thread:[12] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:52:06,546- Thread:[12] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:53:01,133- Thread:[13] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:53:01,406- Thread:[13] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:53:27,042- Thread:[12] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:53:27,142- Thread:[12] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:55:00,592- Thread:[9] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:55:01,355- Thread:[9] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< Employee Login Error
+[ ************************************************************************************************ ]
+{"ClassName":"System.InvalidOperationException","Message":"The model backing the 'CMS_Context' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Data.Entity.CreateDatabaseIfNotExists`1.InitializeDatabase(TContext context)\r\n   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()\r\n   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)\r\n   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()\r\n   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)\r\n   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)\r\n   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()\r\n   at System.Data.Entity.Internal.InternalContext.Initialize()\r\n   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()\r\n   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()\r\n   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()\r\n   at System.Linq.Queryable.Where[TSource](IQueryable`1 source, Expression`1 predicate)\r\n   at CMS_Shared.Factory.UserFactory.Login(LoginRequestModel info) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\UserFactory.cs:line 35","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nInitializeDatabase\nEntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Data.Entity.CreateDatabaseIfNotExists`1\nVoid InitializeDatabase(TContext)","HResult":-2146233079,"Source":"EntityFramework","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-06 17:55:37,529- Thread:[9] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:57:40,341- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-06 17:57:40,838- Thread:[10] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+

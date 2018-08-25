@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+    var user = Session["User"] as CMS_DTO.CMSSession.UserSession;
+}
+
+<!-- BEGIN SIDEBAR -->
+<div class="page-sidebar-wrapper">
+    <!-- BEGIN SIDEBAR -->
+    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+    <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+    <div class="page-sidebar navbar-collapse collapse" id="sidebar-menu" style="position: fixed; z-index: 999999;">
+        <!-- BEGIN SIDEBAR MENU -->
+        <ul class="page-sidebar-menu  page-header-fixed page-sidebar-menu-closed" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+            <li class="sidebar-toggler-wrapper hide">
+                <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                <div class="sidebar-toggler"> </div>
+                <!-- END SIDEBAR TOGGLER BUTTON -->
+            </li>
+            <li class="nav-item active">
+                <a href="@Url.Action("Index", "Home")" class="nav-link nav-toggle">
+                    <i class="fa icon-home"></i>
+                    <span class="title">Home page</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="@Url.Action("Index", "CMSEmployees")" class="nav-link nav-toggle">
+                    <i class="fa fa-user"></i>
+                    <span class="title">Employees</span>
+                </a>
+            </li>
+
+            @{ if (!user.IsSuperAdmin)
+                {
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="alert('You are not authorized to access!')" class="nav-link nav-toggle">
+                            <i class="fa fa-credit-card"></i>
+                            <span class="title">FB Accounts</span>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index","CMSFBAccounts")" class="nav-link nav-toggle">
+                            <i class="fa fa-credit-card"></i>
+                            <span class="title">FB Accounts</span>
+                        </a>
+                    </li>
+                }
+            }
+
+            <li class="nav-item">
+                <a href="@Url.Action("Index","CMSProducts")" class="nav-link nav-toggle">
+                    <i class="fa fa-facebook-square"></i>
+                    <span class="title">FB Posts</span>
+                </a>
+            </li>
+
+            @{ if (!user.IsSuperAdmin)
+                {
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="alert('You are not authorized to access!')" class="nav-link nav-toggle">
+                            <i class="fa fa-folder-open-o"></i>
+                            <span class="title">FB Fanpages</span>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index","CMSKeywords")" class="nav-link nav-toggle">
+                            <i class="fa fa-folder-open-o"></i>
+                            <span class="title">FB Fanpages</span>
+                        </a>
+                    </li>
+                }
+            }
+
+            @{ if (!user.IsSuperAdmin)
+                {
+                    <li class="nav-item">
+                        <a href="javascript:void(0)" onclick="alert('You are not authorized to access!')" class="nav-link nav-toggle">
+                            <i class="fa fa-group"></i>
+                            <span class="title">FB Group Fanpages</span>
+                        </a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index","CMSGroupKeywords")" class="nav-link nav-toggle">
+                            <i class="fa fa-group"></i>
+                            <span class="title">FB Group Fanpages</span>
+                        </a>
+                    </li>
+                }
+            }            
+        </ul>
+        <!-- END SIDEBAR MENU -->
+        <!-- END SIDEBAR MENU -->
+    </div>
+    <!-- END SIDEBAR -->
+</div>
+<!-- END SIDEBAR -->
+<script>
+    $(document).ready(function () {
+    })
+</script>

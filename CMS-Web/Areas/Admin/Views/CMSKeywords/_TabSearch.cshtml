@@ -1,0 +1,24 @@
+﻿@model CMS_DTO.CMSKeyword.CMS_KeywordModels
+
+<tr data-id="@Model.Id" style='@string.Format("display:{0}", Model.Status==9?"none":"table-row")' class="KeyRow">
+    <td>
+        @Html.Hidden(string.Format("ListKeyResult[{0}].ID", Model.OffSet), Model.Id)
+        @Html.Hidden(string.Format("ListKeyResult[{0}].OffSet", Model.OffSet), Model.OffSet)
+        @Html.Hidden(string.Format("ListKeyResult[{0}].Status", Model.OffSet), Model.Status, new { @class = "GroupStatus" })
+        @Html.Hidden(string.Format("ListKeyResult[{0}].Type", Model.OffSet), Model.Type)
+        <a class="btn btn-link" href="@Url.Action("Index", "CMSProducts", new { Key = Model.KeySearch})">@Html.Raw("[" + Model.Sequence + "]" + Model.KeySearch)</a>
+    </td>
+    <td style="text-align: center; ">
+        @Html.Raw("Last crawl:" + Model.Quantity)
+    </td>
+    <td style="text-align: center; ">
+        <a class="btn btn-sm btn-outline-info" onclick="RefreshTabPanelKey('@Model.Id', '@Model.KeySearch'); return false;">@Html.Raw("Crawler now")</a>
+        <a class="btn btn-sm btn-secondary" onclick="Delete('@Model.Id', '@Model.KeySearch'); return false;">@Html.Raw("Delete")</a>
+        <a class="btn btn-sm btn-danger" onclick="DeleteAll(this, '@Model.Id'); return false;">@Html.Raw("Delete and clear posts")</a>
+    </td>
+</tr>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+    });
+</script>

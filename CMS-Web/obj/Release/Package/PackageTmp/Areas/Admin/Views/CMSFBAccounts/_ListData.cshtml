@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+    var IsAdmin = @ViewBag.IsAdmin;
+    var Duplicate = @ViewBag.DuplicateKeyword;
+}
+<style>
+    .rowKey td b {
+        font-size: 15px !important;
+    }
+
+    .linkchange {
+        text-decoration: none !important;
+    }
+    .table .btn {
+        margin-right: -5px !important;
+    }
+    .linkPins {
+        padding: 2px 6px !important;
+    }
+</style>
+
+@model List<CMS_DTO.CMSAcount.CMS_AccountModels>
+<div class="table-responsive">
+    <div class="col-md-12">
+        <!-- BEGIN EXAMPLE TABLE PORTLET-->
+        <div class="portlet box red">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-cogs"></i>All Accounts
+                </div>
+            </div>
+            <div class="portlet-body">
+                <table class="table table-striped table-bordered table-hover dt-responsive" id="sample_3">
+                    <thead @*style="display: none !important; "*@>
+                        <tr>
+                            <th class="text-left">Name</th>
+                            <th class="text-left">Created date</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var item in Model)
+                            {
+                            <tr class="odd gradeX rowKey">
+                                <td class="text-left">
+                                    <a class="btn btn-link" href="" target="_blank"><b>@Html.Raw("[" + item.Sequence + "]" + " " + item.Account)</b></a>
+                                </td>
+                                <td class="text-left">
+                                    @string.Format("{0}", item.CreatedDate.HasValue ? item.CreatedDate.Value.ToString("dd/MM/yyyy") : "")
+                                </td>
+                                <td class="text-center linkchange">
+                                    @{ if (true)
+                                        {
+                                            <a class="btn btn-sm btn-default cls-@item.Id" style="color: #17a2b8 !important; border-color: #17a2b8 !important; ">@Html.Raw("STATUS suppend")</a>
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-sm btn-default cls-@item.Id" style="color: #17a2b8 !important; border-color: #17a2b8 !important; ">@Html.Raw("STATUS ok")</a>
+                                        }
+                                    }
+                                    <a class="btn btn-sm btn-danger" onclick="Delete(this, '@item.Id'); return false;">@Html.Raw("Delete")</a>
+                                </td>
+                            </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- END EXAMPLE TABLE PORTLET-->
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    var _tableEmployee = null;
+    var _settingsOptionTableEmployee = {
+        "language": {
+            "aria": {
+                "sortAscending": ": activate to sort column ascending",
+                "sortDescending": ": activate to sort column descending"
+            },
+            "emptyTable": "No data available in table",
+            "info": "Showing _START_ to _END_ of _TOTAL_ records",
+            "infoEmpty": "No records found",
+            "infoFiltered": "(filtered1 from _MAX_ total records)",
+            "lengthMenu": "Show _MENU_",
+            "search": "Search:",
+            "zeroRecords": "No matching records found",
+            "paginate": {
+                "previous": "Prev",
+                "next": "Next",
+                "last": "Last",
+                "first": "First"
+            }
+        },
+        "oLanguage": {
+            "sSearch": "Tìm Kiếm:",
+            "sLengthMenu": "Xem _MENU_",
+            "sProcessing": "Đang xử lý...",
+            "sZeroRecords": "Không tìm thấy dòng nào phù hợp",
+            "sInfo": "Đang xem _START_ đến _END_ trong tổng số _TOTAL_ mục",
+            "sInfoEmpty": "Đang xem 0 đến 0 trong tổng số 0 mục",
+            "sInfoFiltered": "(được lọc từ _MAX_ mục)",
+            "sInfoPostFix": "",
+        },
+        "bStateSave": true, // save datatable state(pagination, sort, etc) in cookie.
+        "lengthMenu": [
+            [6, 15, 20, -1],
+            [6, 15, 20, "All"] // change per page values here
+        ],
+        "pageLength": 100,
+        "columnDefs": [
+            { "orderable": false, "targets": [2] },
+            { "width": "25%", "targets": [2] },
+        ],
+        "order": [
+            [1, "asc"]
+        ]
+    };
+
+    $(document).ready(function () {
+        if ('@Duplicate' != '') {
+            alert('Duplicate Keyword. Please enter again!');
+        }
+        _tableEmployee = $('#sample_3').DataTable($.extend(true, {}, _settingsOptionTableEmployee));
+
+        $("#groupDdlView").select2({
+            placeholder: "Add to a group",
+            //allowClear: true
+        });
+    })
+
+    function ShowView(url) {
+        ShowViewOrEdit(url);
+    }
+</script>

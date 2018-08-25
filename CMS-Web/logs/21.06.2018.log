@@ -1,0 +1,68 @@
+2018-06-21 09:51:39,339- Thread:[8] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 09:51:41,688- Thread:[8] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746e7e674db0","EmployeeName":"supper admin","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"http://www.cms.somee.com/Uploads/Employees/e8f4297f-3cd2-490d-9f01-a6aa4b9ff95a.jpg","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 09:51:52,543- Thread:[19] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> CrawlData:
+[ ------------------------------------------------------------------------------------------------ ]
+"e81a3b40-750a-468c-98c7-2771288765f9"
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 09:51:54,303- Thread:[19] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< ErrorgetDataPinterest
+ url: https://www.pinterest.com/resource/BaseSearchResource/get/?source_url=/search/pins/?q=http://nghiemxuantu.com.vn/24h&rs=typed&term_meta[]= http://nghiemxuantu.com.vn/24h|typed&data={"options":{"scope":"pins","show_scope_selector":true,"query":"http://nghiemxuantu.com.vn/24h"},"context":{"app_version":"aad9791"},"module":{"name":"SearchPage","options":{"scope":"pins","query":"http://nghiemxuantu.com.vn/24h"}},"append":false,"error_strategy":0}&_=20180621095152866
+Bookmarks:
+[ ************************************************************************************************ ]
+{"ClassName":"System.Collections.Generic.KeyNotFoundException","Message":"The given key was not present in the dictionary.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)\r\n   at CallSite.Target(Closure , CallSite , Object , String )\r\n   at System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)\r\n   at CMS_Shared.Utilities.CrawlerHelper.getDataPinterest(String url, CMS_CrawlerModels model, String pinId, String& bookmarks) in D:\\My Outsource\\CrawlerDataPinterest\\CMS-Shared\\Utilities\\CrawlerHelper.cs:line 245","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nget_Item\nmscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Collections.Generic.Dictionary`2\nTValue get_Item(TKey)","HResult":-2146232969,"Source":"mscorlib","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-06-21 09:51:54,349- Thread:[19] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> CreateOrUpdatePin
+[ ------------------------------------------------------------------------------------------------ ]
+"e81a3b40-750a-468c-98c7-2771288765f9"
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 09:51:54,443- Thread:[19] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> ResponseCreateOrUpdatePin:e81a3b40-750a-468c-98c7-2771288765f9
+[ ------------------------------------------------------------------------------------------------ ]
+true
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 09:51:54,490- Thread:[19] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> ResponseCrawlData: e81a3b40-750a-468c-98c7-2771288765f9
+[ ------------------------------------------------------------------------------------------------ ]
+true
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 14:12:02,163- Thread:[8] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 14:12:05,842- Thread:[8] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746e7e674db0","EmployeeName":"supper admin","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"http://www.cms.somee.com/Uploads/Employees/e8f4297f-3cd2-490d-9f01-a6aa4b9ff95a.jpg","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 15:56:54,798- Thread:[5] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-06-21 15:56:56,941- Thread:[5] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746e7e674db0","EmployeeName":"supper admin","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"http://localhost:50327/Uploads/Employees/a44d5a32-2043-42be-952a-bb18de944ce7.jpg","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+

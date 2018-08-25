@@ -1,0 +1,36 @@
+2018-07-16 12:15:34,128- Thread:[23] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.IO.IOException","Message":"Received an unexpected EOF or 0 bytes from the transport stream.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)\r\n   at System.IO.StreamReader.ReadBuffer()\r\n   at System.IO.StreamReader.ReadToEnd()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 521","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nRead\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.ConnectStream\nInt32 Read(Byte[], Int32, Int32)","HResult":-2146232800,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-16 13:03:50,567- Thread:[30] - Level:ERROR - From: NSLog.Logger.Error - Message: 
+<<< CrawlerFB Detail
+[ ************************************************************************************************ ]
+{"ClassName":"System.IO.IOException","Message":"Received an unexpected EOF or 0 bytes from the transport stream.","Data":null,"InnerException":null,"HelpURL":null,"StackTraceString":"   at System.Net.ConnectStream.Read(Byte[] buffer, Int32 offset, Int32 size)\r\n   at System.IO.StreamReader.ReadBuffer()\r\n   at System.IO.StreamReader.ReadToEnd()\r\n   at CMS_Shared.Utilities.CrawlerFbHelpers_v2.CrawlerFBDetail(String Url, List`1 fb_id, PinsModels& pin) in D:\\My Outsource\\FBToolVer2\\CMS-Shared\\Utilities\\CrawlerFbHelpers_v2.cs:line 521","RemoteStackTraceString":null,"RemoteStackIndex":0,"ExceptionMethod":"8\nRead\nSystem, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Net.ConnectStream\nInt32 Read(Byte[], Int32, Int32)","HResult":-2146232800,"Source":"System","WatsonBuckets":null}
+[ ************************************************************************************************ ]
+
+2018-07-16 23:57:33,975- Thread:[16] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-16 23:57:34,172- Thread:[16] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-16 23:59:18,838- Thread:[15] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Start
+[ ------------------------------------------------------------------------------------------------ ]
+{"Email":"admin@gmail.com","Password":"123","RememberMe":false,"ReturnUrl":null,"LanguageId":null}
+[ ------------------------------------------------------------------------------------------------ ]
+
+2018-07-16 23:59:18,851- Thread:[15] - Level:INFO  - From: NSLog.Logger.Info - Message: 
+>>> Employee Login Done
+[ ------------------------------------------------------------------------------------------------ ]
+{"EmployeeID":"b35f78d3-7e1c-4fa1-a559-746hjlc74db0","EmployeeName":"Nghiêm Xuân T?","EmployeeEmail":"admin@gmail.com","EmployeeImageURL":"","IsSupperAdmin":true,"RoleID":null,"RoleName":null}
+[ ------------------------------------------------------------------------------------------------ ]
+

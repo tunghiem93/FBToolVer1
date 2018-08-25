@@ -1,0 +1,91 @@
+D:\David\CMS-Web\CMS-Entity\bin\Debug\CMS-Entity.dll.config
+D:\David\CMS-Web\CMS-Entity\bin\Debug\CMS-Entity.dll
+D:\David\CMS-Web\CMS-Entity\bin\Debug\CMS-Entity.pdb
+D:\David\CMS-Web\CMS-Entity\bin\Debug\AutoMapper.dll
+D:\David\CMS-Web\CMS-Entity\bin\Debug\EntityFramework.dll
+D:\David\CMS-Web\CMS-Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\David\CMS-Web\CMS-Entity\bin\Debug\AutoMapper.xml
+D:\David\CMS-Web\CMS-Entity\bin\Debug\EntityFramework.xml
+D:\David\CMS-Web\CMS-Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS-Entity.csprojResolveAssemblyReference.cache
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS-Entity.csproj.CoreCompileInputs.cache
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS-Entity.dll
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS-Entity.pdb
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createdatabase.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS-Entity.csproj.GenerateResource.Cache
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updateTableCategories.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updateDataType.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedatatype1815.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedatatype1815_v2.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatetableCategory_type.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatetablecategoryfieldCreateByUpdateBy.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatecolumnIdInCategory.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createtableProduct.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedatabase0305.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatetableemployee.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.addfieldPasswordInTableEmployee.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatecolumnIDCard.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.addColumnImageURLInTableEmployee.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createTablePolicy.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createTableNews.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createTableImages.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatetableProductFieldProductName.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updateMaxLenghtShortDescription.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.addTableCustomer.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updateDatabase_0604.resources
+D:\David\CMS-Web\CMS-Entity\obj\Debug\CMS_Entity.Migrations.addFieldParentIdOnTableCategory.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\CMS-Entity.dll.config
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\CMS-Entity.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\CMS-Entity.pdb
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\AutoMapper.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\EntityFramework.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\AutoMapper.xml
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\EntityFramework.xml
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS-Entity.csprojAssemblyReference.cache
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.UpdateEntity.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedb1406.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedb15062018.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedb1506.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedb1504400.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedb1806.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS_Entity.Migrations.updatedb20062018.resources
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS-Entity.csproj.GenerateResource.cache
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS-Entity.csproj.CoreCompileInputs.cache
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS-Entity.csproj.CopyComplete
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS-Entity.dll
+D:\My Outsource\CrawlerDataPinterest\CMS-Entity\obj\Debug\CMS-Entity.pdb
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\CMS-Entity.dll.config
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\CMS-Entity.dll
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\CMS-Entity.pdb
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\AutoMapper.dll
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\EntityFramework.dll
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\AutoMapper.xml
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\EntityFramework.xml
+D:\My Outsource\FBToolVer2\CMS-Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS-Entity.csprojAssemblyReference.cache
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createDB.resources
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS_Entity.Migrations.ModTbl_Pin_AddCol.resources
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS-Entity.csproj.GenerateResource.cache
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS-Entity.csproj.CoreCompileInputs.cache
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS-Entity.csproj.CopyComplete
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS-Entity.dll
+D:\My Outsource\FBToolVer2\CMS-Entity\obj\Debug\CMS-Entity.pdb
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\CMS-Entity.dll.config
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\CMS-Entity.dll
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\CMS-Entity.pdb
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\AutoMapper.dll
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\EntityFramework.dll
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\EntityFramework.SqlServer.dll
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\AutoMapper.xml
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\EntityFramework.xml
+D:\My Outsource\FBToolVer1\CMS-Entity\bin\Debug\EntityFramework.SqlServer.xml
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS_Entity.Migrations.createDB.resources
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS_Entity.Migrations.ModTbl_Pin_AddCol.resources
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS-Entity.csproj.GenerateResource.cache
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS-Entity.csproj.CoreCompileInputs.cache
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS-Entity.csproj.CopyComplete
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS-Entity.dll
+D:\My Outsource\FBToolVer1\CMS-Entity\obj\Debug\CMS-Entity.pdb
