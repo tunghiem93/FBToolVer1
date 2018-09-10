@@ -24,6 +24,7 @@ namespace CMS_DTO.CMSKeyword
         public string StrLastUpdate { get; set; }
 
         public List<CMS_KeywordModels> ListKeyResult { get; set; }
+        public string GroupID { get; set; }
         public CMS_KeywordModels()
         {
             ListKeyResult = new List<CMS_KeywordModels>();

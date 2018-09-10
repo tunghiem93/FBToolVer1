@@ -75,7 +75,7 @@
                     <div class="col-md-7 col-sm-7 col-xs-12" style="margin-left: -15px !important; ">
                         <div class="input-prepend input-group" style="width:100%">
                             @Html.DropDownListFor(model => model.listKeywords,
-                    new SelectList(@ViewBag.Keywords, "Value", "Text", Model.listKeywords), "Please select Key Words",
+                    new SelectList(@ViewBag.Keywords, "Value", "Text", Model.listKeywords), "Filter by Keywords",
                     new
                     {
                         @class = "form-control select2_multiple",
@@ -118,7 +118,7 @@
                     <div class="col-md-6 col-sm-6 col-xs-12" style="">
                         <div class="input-prepend input-group" style="width:100%">
                             @Html.DropDownListFor(model => model.GroupID,
-                    new SelectList(@ViewBag.ListGroupFanpage, "Value", "Text", Model.GroupID), "Please select group fanpage",
+                    new SelectList(@ViewBag.ListGroupFanpage, "Value", "Text", Model.GroupID), "Filter by group keywords",
                     new
                     {
                         @class = "form-control select2_multiple",
@@ -250,12 +250,12 @@
         })
 
         $("#KeywordsDdl").select2({
-            placeholder: "Fanpage",
+            placeholder: "Filter by Keywords",
             multiple: true,
         });
 
         $("#GroupKeywordsDdl").select2({
-            placeholder: "Group Fanpage",
+            placeholder: "Filter by Group Keywords",
             allowClear: true
             //multiple: true,
         });

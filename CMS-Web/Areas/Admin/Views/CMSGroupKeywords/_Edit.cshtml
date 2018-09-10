@@ -6,7 +6,7 @@
 
     @{
         var groupID = Model.Id;
-        ViewBag.Title = "Group accounts - list data";
+        ViewBag.Title = "Group Keywords - list data";
     }
 <style>
     .table .btn {
@@ -23,7 +23,7 @@
             <div class="page-title">
                 <!-- BEGIN PAGE BAR -->
                 @Html.Partial("_breadcrumb", new Dictionary<string, string>
-                    { { "A", "Home page" }, { "B", "Account in group - List data" } })
+                    { { "A", "Home page" }, { "B", "Keyword in group - List data" } })
                     <!-- END PAGE BAR -->
             </div>
             <div class="page-main">
@@ -33,7 +33,7 @@
                         <div class="portlet box red">
                             <div class="portlet-title">
                                 <div class="caption">
-                                    <i class="fa fa-cogs"></i>@Html.Raw("Account in group \"" +  Model.Name + "\"")
+                                    <i class="fa fa-cogs"></i>@Html.Raw("Keyword in group \"" +  Model.Name + "\"")
                                 </div>
                             </div>
                             <div class="portlet-body">
@@ -169,7 +169,7 @@
                 },
                 error: function (e) {
                     if (e.status == 400) {
-                        $(".detail-error").text("Unable to delete this account!");
+                        $(".detail-error").text("Unable to delete this Group Keyword!");
                     }
                     $('.se-pre-con').hide();
                 }

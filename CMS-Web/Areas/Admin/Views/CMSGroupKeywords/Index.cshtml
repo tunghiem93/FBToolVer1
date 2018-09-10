@@ -3,7 +3,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 @{
-    ViewBag.Title = "Group accounts - List data";
+    ViewBag.Title = "Group keywords - List data";
 }
 <div role="main">
     <div class="se-pre-con" style="display: none;"></div>
@@ -19,14 +19,9 @@
                 <div class="row" style="margin-bottom:15px;">
                     <div class="form-group">
                         <div class="control-label col-md-1 col-sm-1 col-xs-12 lineHeight"></div>
-                        <div class="col-md-3 col-sm-3 col-xs-12">
-                            <div class="input-prepend input-group">
-                                <span class="add-on input-group-addon"><i class="glyphicon fa fa-search"></i></span>
-                                <input type="text" name="Name" value="@Model.Name" class="form-control" id="idStrSerch" placeholder="Add Group..." />
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-12">
-                            <button type="submit" class="btn btn-primary"><i class="fa fa-plus-square" style="font-size:14px;"></i><span>&nbsp; Add</span></button>
+                        <div class="col-md-3 col-sm-3 col-xs-12" style="display: inline-flex;">
+                            <button type="submit" class="btn btn-primary form-inline" style="margin-right: -5px; "><i class="fa fa-plus-square" style="font-size:14px; "></i><span>&nbsp; Add</span></button>                           
+                            <input type="text" name="Name" value="@Model.Name" class="form-control form-inline" id="idStrSerch" placeholder="Add Group..." />                            
                         </div>
                     </div>
                 </div>
@@ -71,7 +66,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to delete this account!");
+                    $(".detail-error").text("Unable to delete this GroupKeyword!");
                 }
                 $('.se-pre-con').hide();
             }

@@ -30,7 +30,7 @@ namespace CMS_Web.Areas.Admin.Controllers
             if (lstItem != null)
                 ListItem = lstItem.Select(o=>o.KeySearch).ToList();
 
-                ViewBag.ListGroupKey = getListGroupKeyword();
+            ViewBag.ListGroupKey = getListGroupKeyword();
         }
 
         public ActionResult Index()

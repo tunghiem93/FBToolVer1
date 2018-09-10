@@ -3,7 +3,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 @{
-    ViewBag.Title = "Fanpages - list data";
+    ViewBag.Title = "Keywords - list data";
 }
 
 <style>
@@ -17,31 +17,36 @@
     <div class="se-pre-con" style="display: none;"></div>
     <div class="page-title">
         <!-- BEGIN PAGE BAR -->
-        @Html.Partial("_breadcrumb", new Dictionary<string, string> { { "A", "Home page" }, { "B", "List data - Fanpages" } })
+        @Html.Partial("_breadcrumb", new Dictionary<string, string> { { "A", "Home page" }, { "B", "List data - Keywords" } })
         <!-- END PAGE BAR -->
     </div>
     <div class="page-main">
         <div class="page-main">
             @using (Html.BeginForm("LoadGrid", "CMSKeywords", FormMethod.Post, new { @class = "form-horizontal search-form" }))
             {
-                <div class="row" style="margin-bottom:15px;">
-                    <div class="form-group row">
+                <div style="margin-bottom:15px;">
+                    <div class="form-group">
                         <div class="control-label col-md-1 col-sm-1 col-xs-12 lineHeight"></div>
-                        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-right: -32px;">
-                            <div class="input-prepend input-group">
-                                <span class="add-on input-group-addon"><i class="glyphicon fa fa-search"></i></span>
-                                <input type="text" name="KeySearch" value="@Model.KeySearch" class="form-control" id="idStrSerch" placeholder="Add fanpages..." />
-                            </div>
-                            @*<label class="label label-danger" style='@string.Format("display:{0}", (user.DuplicateKeyword.Length > 0) ? "block":"none")'>Duplicate Keyword. Please enter again!</label>*@
+                        <div class="col-md-6 col-sm-6 col-xs-12" style="margin-right: -32px; display: inline-flex;">
+                            <button type="submit" class="btn btn-primary form-inline" style="margin-right: -5px; "><i class="fa fa-plus-square" style="font-size:14px; "></i><span>&nbsp; Add</span></button>
+                            <input type="text" name="KeySearch" value="@Model.KeySearch" class="form-control form-inline" id="idStrSerch" placeholder="Add keywords..." required />
+                            @Html.DropDownListFor(model => model.GroupID,
+                            new SelectList(@ViewBag.ListGroupKey, "Value", "Text", Model.GroupID), "Group keywords",
+                            new
+                            {
+                                @class = "form-control form-inline select2_multiple",
+                                @id = "ddlViewGroup",
+                                @style = "width:100%;",
+                                @required = "required"
+                            })
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-5 col-sm-5 col-xs-12">
                             <table>
                                 <tr>
-                                    <td class="text-center linkchange">
-                                        <button type="submit" class="btn btn-primary"style="margin-right: -5px; "><i class="fa fa-plus-square" style="font-size:14px; "></i><span>&nbsp; Add</span></button>
-                                        <a class="btn btn-default cls-CrawlAll" style="color: #17a2b8 !important; border-color: #17a2b8 !important; margin-right: -5px;" onclick="KeywordCrawlAll(this); return false;">@Html.Raw("Crawl all now")</a>
-                                        <a class="btn btn-default" style="color: #fff !important; background-color: #6c757d !important; border-color: #6c757d !important; margin-right: -5px;" onclick="DeleteAll(this); return false;">@Html.Raw("Delete all")</a>
-                                        <a class="btn btn-danger" onclick="DeleteAndClearPostAll(this); return false;">@Html.Raw("Delete and clear all posts")</a>
+                                    <td style="display:inline-flex">
+                                        <a class="btn btn-default form-inline cls-CrawlAll" style="color: #17a2b8 !important; border-color: #17a2b8 !important; margin-right: -5px;" onclick="KeywordCrawlAll(this); return false;">@Html.Raw("Crawl all now")</a>
+                                        <a class="btn btn-default form-inline" style="color: #fff !important; background-color: #6c757d !important; border-color: #6c757d !important; margin-right: -5px;" onclick="DeleteAll(this); return false;">@Html.Raw("Delete all")</a>
+                                        <a class="btn btn-danger form-inline" onclick="DeleteAndClearPostAll(this); return false;">@Html.Raw("Delete and clear all posts")</a>
                                     </td>
                                 </tr>
                             </table>
@@ -61,7 +66,7 @@
     var keyID = "";
 
     $(document).ready(function () {
-        LoadGrid();
+        LoadGrid();        
     });
 
     $(".search-form").submit(function (e) {
@@ -92,7 +97,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to crawl this Fanpage!");
+                    $(".detail-error").text("Unable to crawl this Keyword!");
                 }
                 //$('.se-pre-con').hide();
             }
@@ -117,7 +122,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to delete this Fanpage!");
+                    $(".detail-error").text("Unable to delete this Keyword!");
                 }
                 $('.se-pre-con').hide();
             }
@@ -142,7 +147,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to delete this Fanpage!");
+                    $(".detail-error").text("Unable to delete this Keyword!");
                 }
                 $('.se-pre-con').hide();
             }
@@ -172,7 +177,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to crawl this Fanpage!");
+                    $(".detail-error").text("Unable to crawl this Keyword!");
                 }
                 //$('.se-pre-con').hide();
             }
@@ -199,7 +204,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to delete this Fanpage!");
+                    $(".detail-error").text("Unable to delete this Keyword!");
                 }
                 $('.se-pre-con').hide();
             }
@@ -226,7 +231,7 @@
             },
             error: function (e) {
                 if (e.status == 400) {
-                    $(".detail-error").text("Unable to delete this Fanpage!");
+                    $(".detail-error").text("Unable to delete this Keyword!");
                 }
                 $('.se-pre-con').hide();
             }
@@ -255,12 +260,12 @@
                     $('.se-pre-con').show();
                 },
                 complete: function () {
-                    alert('Fanpage save successful!')
+                    alert('Keyword save successful!')
                 $('.se-pre-con').hide();
                 },
                 error: function (e) {
                     if (e.status == 400) {
-                        alert("Can not save Fanpage!");
+                        alert("Can not save Keyword!");
                     }
                 $('.se-pre-con').hide();
                 }
