@@ -78,6 +78,13 @@ namespace CMS_Shared
             AccPending = 2,
             AccBlocked = 3,
         }
+
+        public enum EType
+        {
+            Post = 0,
+            People = 1,
+            Photo = 2,
+        }
         #endregion
 
         public static int WidthProduct = Convert.ToInt16(ConfigurationManager.AppSettings["WidthProduct"]);
@@ -138,5 +145,7 @@ namespace CMS_Shared
             "104.140.210.231:3128",
             "173.234.181.217:3128"
         };
+
+        
     }
 }
