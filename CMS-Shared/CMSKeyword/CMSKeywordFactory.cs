@@ -91,9 +91,10 @@ namespace CMS_Shared.Keyword
 
                                 /* add new record */
                                 var dateTimeNow = DateTime.Now;
+                                var Id = Guid.NewGuid().ToString();
                                 var newKey = new CMS_KeyWord()
                                 {
-                                    ID = Guid.NewGuid().ToString(),
+                                    ID = Id,
                                     KeyWord = model.KeySearch,
                                     Status = (byte)Commons.EStatus.Active,
                                     CreatedBy = model.CreatedBy,
@@ -103,6 +104,16 @@ namespace CMS_Shared.Keyword
                                     Sequence = ++curSeq,
                                 };
                                 _db.CMS_KeyWord.Add(newKey);
+                                var newGroupKey = new CMS_R_GroupKey_KeyWord()
+                                {
+                                    ID = Guid.NewGuid().ToString(),
+                                    GroupKeyID = model.GroupID,
+                                    KeyWordID = Id,
+                                    Status = (byte)Commons.EStatus.Active,
+                                    CreatedDate = DateTime.Now,
+                                    UpdatedDate = DateTime.Now,
+                                };
+                                _db.CMS_R_GroupKey_KeyWord.Add(newGroupKey);
                             }
                             else if (checkDup.Status != (byte)Commons.EStatus.Active) /* re-active old key */
                             {
