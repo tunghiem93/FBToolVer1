@@ -65,6 +65,10 @@ namespace CMS_Shared.Utilities
                                         ParseHtmlPostAndPeople(html);
                                     }
                                     
+                                    if(type == (byte)Commons.EType.Video)
+                                    {
+                                        ParseHtmlVideo(html);
+                                    }
                                 }
                             }
                         }
@@ -78,7 +82,96 @@ namespace CMS_Shared.Utilities
         }
 
 
-       
+        public static void ParseHtmlVideo(string html)
+        {
+            try
+            {
+                HtmlDocument doc = new HtmlDocument();
+                doc.LoadHtml(html);
+                var _mHtml = doc.DocumentNode.Descendants()
+                                             .Where(x => (x.Name == "div" && x.Attributes["class"] != null &&
+                                                   x.Attributes["class"].Value.Contains("_4ou6"))).ToList();
+                if(_mHtml != null && _mHtml.Any())
+                {
+                    foreach(var mItem in _mHtml)
+                    {
+                        /* get id */
+                        var strIds = mItem.GetAttributeValue("data-bt", "");
+                        strIds = System.Web.HttpUtility.HtmlDecode(strIds);
+                        if (!string.IsNullOrEmpty(strIds))
+                        {
+                            var _jsonId = JsonConvert.DeserializeObject<JsonData>(strIds);
+                            if (_jsonId != null)
+                            {
+                                var Id = _jsonId.id;
+                            }
+                        }
+
+                        /* get link video */
+                        var objLink = mItem.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null
+                                                                && o.Attributes["class"].Value.Contains("_4ovv")).FirstOrDefault();
+                        if(objLink != null)
+                        {
+                            var mLink = objLink.Descendants().Where(o => o.Name == "a" && o.Attributes["class"] != null
+                                                                    && o.Attributes["class"].Value.Contains("async_saving _400z _2-40 _3k0i")).FirstOrDefault();
+                            if(mLink != null)
+                            {
+                                var Link = mLink.GetAttributeValue("href", "");
+                                if(!string.IsNullOrEmpty(Link))
+                                {
+                                    Link = "https://www.facebook.com" + Link;
+                                }
+                            }
+                        }
+
+                        /* get owner name */
+                        var objOwnerName = mItem.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null
+                                                                    && o.Attributes["class"].Value.Contains("_4ovi")).FirstOrDefault();
+                        if(objOwnerName != null)
+                        {
+                            var OwnerName = objOwnerName.InnerText;
+                        }
+
+                        /* get description */
+                        var objDes = mItem.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null
+                                                                    && o.Attributes["class"].Value.Contains("_4ovj _4ovl")).FirstOrDefault();
+                        if (objDes != null)
+                        {
+                            var Des = objDes.InnerText;
+                            Des = System.Web.HttpUtility.HtmlDecode(Des);
+                        }
+
+                        /* get facebook fan page link */
+                        var objFanPage = mItem.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null
+                                                                    && o.Attributes["class"].Value.Contains("_42bz _4ovs")).FirstOrDefault();
+                        if(objFanPage != null)
+                        {
+                            var FanPage = objFanPage.Descendants("a").FirstOrDefault();
+                            if(FanPage != null)
+                            {
+                                var LinkFanPage = FanPage.GetAttributeValue("href", "");
+                                var DesFanPage = FanPage.InnerText;
+                            }
+                        }
+
+                        /* get time */
+                        var objTime = mItem.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null &&
+                                                                     o.Attributes["class"].Value.Contains("_42b-")).FirstOrDefault();
+                        if (objTime != null)
+                        {
+                            var abbr = objTime.Descendants("abbr").FirstOrDefault();
+                            var timeStamp = abbr.GetAttributeValue("data-utime", "");
+                            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+                            var Created_At = dtDateTime.AddSeconds(double.Parse(timeStamp)).ToLocalTime();
+                        }
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                NSLog.Logger.Error("ParseHtmlVideo:", ex);
+            }
+        }
 
 
         /// <summary>
