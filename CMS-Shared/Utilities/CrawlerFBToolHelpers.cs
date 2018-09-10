@@ -57,7 +57,12 @@ namespace CMS_Shared.Utilities
 
                                     if(type == (byte)Commons.EType.Post)
                                     {
-                                        ParseHtmlPost(html);
+                                        ParseHtmlPostAndPeople(html);
+                                    }
+
+                                    if(type == (byte)Commons.EType.People)
+                                    {
+                                        ParseHtmlPostAndPeople(html);
                                     }
                                     
                                 }
@@ -72,11 +77,15 @@ namespace CMS_Shared.Utilities
             }
         }
 
+
+       
+
+
         /// <summary>
         /// parse html tab post
         /// </summary>
         /// <param name="html"></param>
-        public static void ParseHtmlPost(string html)
+        public static void ParseHtmlPostAndPeople(string html)
         {
             try
             {
@@ -108,6 +117,10 @@ namespace CMS_Shared.Utilities
                         if(objOwnerName != null)
                         {
                             var OwnerName = objOwnerName.InnerText;
+                            if(!string.IsNullOrEmpty(OwnerName))
+                            {
+                                OwnerName = System.Web.HttpUtility.HtmlDecode(OwnerName);
+                            }
                             var OwnerHref = objOwnerName.GetAttributeValue("href", "");
                         }
 
@@ -155,14 +168,6 @@ namespace CMS_Shared.Utilities
                                     ImageUrl = ImageUrl.Replace("amp;", "");
                                 }
                             }
-                        }
-
-                        /* get like */
-                        var objLike = mItem.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null &&
-                                                                     o.Attributes["class"].Value.Contains("_57w")).FirstOrDefault();
-                        if(objLike != null)
-                        {
-                            var Like = objLike.InnerText;
                         }
                     }
                 }
@@ -317,7 +322,7 @@ namespace CMS_Shared.Utilities
                     tr = null,
                     is_trending = false,
                     callsite = "browse_ui:init_result_set",
-                    page_number = 1,
+                    page_number = 2,
                 };
                 return JsonConvert.SerializeObject(enc_q);
             }
