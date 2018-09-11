@@ -436,7 +436,7 @@ namespace CMS_Shared.Keyword
                             /* call drawler api to crawl data */
                             CMSPinFactory _fac = new CMSPinFactory();
 
-                            var listAcc = _db.CMS_Account.Where(o => o.Status == (byte)Commons.EStatus.Active && o.IsActive).ToList();
+                            var listAcc = _db.CMS_Account.Where(o => o.Status == (byte)Commons.EStatus.Active && o.IsActive && !string.IsNullOrEmpty(o.Cookies)).ToList();
                             var listCookie = listAcc.Select(x => x.Cookies).ToList();
                             var _cookie = CommonHelper.RamdomCookie(listCookie);
                             CrawlerFbHelpers_v2.CrawlerAllFb(keyWord.KeyWord, _cookie, ref model);

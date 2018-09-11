@@ -161,6 +161,121 @@ namespace CMS_Web.Areas.Admin.Controllers
             return View(model);
         }
 
+        public ActionResult Search()
+        {
+            try
+            {
+                var FilterModel = new PinFilterDTO();
+                FilterModel.PageIndex = Commons.PageIndex;
+                FilterModel.PageSize = Commons.PageSize;
+                FilterModel.CreatedDateFrom = null;
+                FilterModel.CreatedDateTo = null;
+                // var _Key = Request["Key"] ?? "";
+                var TypeTime = Request["TypeTime"] ?? "2";
+                //var Sort1 = Request["Sort1"] ?? "";
+                var Sort2 = Request["Sort2"] ?? "2";
+
+                //  var TypePin = Request["TypePin"] ?? "";
+                var _TypeQuantity = Request["TypeQuantity"];
+                int TypeQuantity = -1;
+                if (!string.IsNullOrEmpty(_TypeQuantity))
+                {
+                    TypeQuantity = Convert.ToInt16(_TypeQuantity);
+                }
+                var Keywords = Request["listKeywords"] ?? null;
+                char[] separator = new char[] { ',' };
+                var ListKeyword = CommonHelper.ParseStringToList(Keywords, separator);
+                var _FromDate = Convert.ToDateTime(Request["FromDate"]);
+                var _ToDate = Convert.ToDateTime(Request["ToDate"]);
+                #region "comment"
+                //cache data
+                //Response.Cookies["TypeTime"].Value = TypeTime.ToString();
+                //Response.Cookies["TypeTime"].Expires = DateTime.Now.AddYears(1); // add expiry time
+
+                //Response.Cookies["TypePin"].Value = TypePin.ToString();
+                //Response.Cookies["TypePin"].Expires = DateTime.Now.AddYears(1); // add expiry time
+
+                //Response.Cookies["FromDate"].Value = _FromDate.ToString();
+                //Response.Cookies["FromDate"].Expires = DateTime.Now.AddYears(1); // add expiry time
+                //Response.Cookies["ToDate"].Value = _ToDate.ToString();
+                //Response.Cookies["ToDate"].Expires = DateTime.Now.AddYears(1); // add expiry time
+                //if(TypeQuantity != 0)
+                //{
+                //    Response.Cookies["TypeQuantity"].Value = TypeQuantity.ToString();
+                //    Response.Cookies["TypeQuantity"].Expires = DateTime.Now.AddYears(1); // add expiry time
+                //}
+                #endregion
+                FilterModel.CreatedAtFrom = _FromDate;
+                FilterModel.CreatedAtTo = _ToDate;
+
+                var _Group = Request["GroupID"] ?? "";
+                if (!string.IsNullOrEmpty(_Group))
+                {
+                    FilterModel.LstGroupID.Add(_Group);
+
+                    var _lstKeywords = getListKeyWordByGroup(_Group);
+                    FilterModel.LstKeyWordID.AddRange(_lstKeywords);
+                }
+
+                if (TypeQuantity.ToString() == Commons.EQuantityType.ZeroToOne.ToString("d"))
+                {
+                    FilterModel.PinCountFrom = 0;
+                    FilterModel.PinCountTo = 100;
+                }
+                if (TypeQuantity.ToString() == Commons.EQuantityType.OneToTwo.ToString("d"))
+                {
+                    FilterModel.PinCountFrom = 100;
+                    FilterModel.PinCountTo = 200;
+                }
+                if (TypeQuantity.ToString() == Commons.EQuantityType.TwoToThree.ToString("d"))
+                {
+                    FilterModel.PinCountFrom = 200;
+                    FilterModel.PinCountTo = 300;
+                }
+                if (TypeQuantity.ToString() == Commons.EQuantityType.ThreeToFour.ToString("d"))
+                {
+                    FilterModel.PinCountFrom = 300;
+                    FilterModel.PinCountTo = 400;
+                }
+                if (TypeQuantity.ToString() == Commons.EQuantityType.FourToFive.ToString("d"))
+                {
+                    FilterModel.PinCountFrom = 400;
+                    FilterModel.PinCountTo = 500;
+                }
+                if (TypeQuantity.ToString() == Commons.EQuantityType.MoreFive.ToString("d"))
+                {
+                    FilterModel.PinCountFrom = 500;
+                }
+
+                if (ListKeyword != null && ListKeyword.Count > 0)
+                {
+                    FilterModel.LstKeyWordID = ListKeyword;
+                    // Response.Cookies["Keywords"].Value = Keywords.ToString();
+                    //  Response.Cookies["Keywords"].Expires = DateTime.Now.AddYears(1); // add expiry time
+                }
+
+                FilterModel.TypeTime = TypeTime;
+                var tmp = 0;
+                int.TryParse(TypeTime, out tmp);
+                FilterModel.Sort1 = tmp;
+                int.TryParse(Sort2, out tmp);
+                FilterModel.Sort2 = tmp;
+
+                var modelCrawler = new CMS_CrawlerModels();
+                var _pinModels = new List<PinsModels>();
+                var msg = "";
+                int totalPin = 0;
+                var result = _fac.GetPin(ref _pinModels, ref totalPin, FilterModel, ref msg);
+                if (result)
+                {
+                    modelCrawler.Pins = _pinModels;
+                }
+                return PartialView("_ListItem", modelCrawler);
+            }
+            catch (Exception ex) { }
+            return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        }
+
         public ActionResult LoadGrid()
         {
             //var model = _factory.GetList();
@@ -230,119 +345,7 @@ namespace CMS_Web.Areas.Admin.Controllers
                 Response.StatusCode = (int)HttpStatusCode.BadRequest;
                 return PartialView("_Create", model);
             }
-        }
-
-        [HttpGet]
-        public ActionResult Edit(string Id)
-        {
-            var model = GetDetail(Id);
-            var _OffSet = 0;
-            return PartialView("_Edit", model);
-        }
-
-        [HttpPost]
-        public ActionResult Edit(CMS_ProductsModels model)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    return PartialView("_Edit", model);
-                }
-                byte[] photoByte = null;
-                Dictionary<int, byte[]> lstImgByte = new Dictionary<int, byte[]>();
-                var data = new List<CMS_ImagesModels>();
-                
-                var msg = "";
-                var result = true; // _factory.CreateOrUpdate(model, ref msg);
-                if (result)
-                {
-                    foreach (var item in data)
-                    {
-                        if (!string.IsNullOrEmpty(item.ImageURL) && item.PictureByte != null)
-                        {
-                            if (System.IO.File.Exists(Server.MapPath("~/Uploads/Products/" + item.TempImageURL)))
-                            {
-                                ImageHelper.Me.TryDeleteImageUpdated(Server.MapPath("~/Uploads/Products/" + item.TempImageURL));
-                            }
-
-                            var path = Server.MapPath("~/Uploads/Products/" + item.ImageURL);
-                            MemoryStream ms = new MemoryStream(lstImgByte[item.OffSet], 0, lstImgByte[item.OffSet].Length);
-                            ms.Write(lstImgByte[item.OffSet], 0, lstImgByte[item.OffSet].Length);
-                            System.Drawing.Image imageTmp = System.Drawing.Image.FromStream(ms, true);
-
-                            ImageHelper.Me.SaveCroppedImage(imageTmp, path, item.ImageURL, ref photoByte, 400, Commons.WidthProduct, Commons.HeightProduct);
-                            model.PictureByte = photoByte;
-                        }
-                    }
-                    return RedirectToAction("Index");
-                }
-                ModelState.AddModelError("ProductCode", msg);
-                Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                return PartialView("_Edit", model);
-            }
-            catch (Exception ex)
-            {
-                Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                return PartialView("_Edit", model);
-            }
-        }
-
-        [HttpGet]
-        public ActionResult View(string Id)
-        {
-            var model = GetDetail(Id);
-            
-            return PartialView("_View", model);
-        }
-
-        [HttpGet]
-        public ActionResult Delete(string Id)
-        {
-            var model = GetDetail(Id);
-            return PartialView("_Delete", model);
-        }
-
-        [HttpPost]
-        public ActionResult Delete(CMS_ProductsModels model)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    return PartialView("_Delete", model);
-                }
-                var msg = "";
-                var _LstImageOfProduct = true; // _factory.GetListImageOfProduct(model.Id);
-                var result = true; // _factory.Delete(model.Id, ref msg);
-                //if (result)
-                //{
-                //    if(_LstImageOfProduct != null && _LstImageOfProduct.Any())
-                //    {
-                //        foreach(var item in _LstImageOfProduct)
-                //        {
-                //            // delete image for folder
-                //            if (System.IO.File.Exists(Server.MapPath("~/Uploads/Products/" + item.ImageURL)))
-                //            {
-                //                ImageHelper.Me.TryDeleteImageUpdated(Server.MapPath("~/Uploads/Products/" + item.ImageURL));
-                //            }
-                //        }
-                //    }
-                //    return RedirectToAction("Index");
-                //}
-                    
-                //ModelState.AddModelError("ProductCode", msg);
-                //Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                return PartialView("_Delete", model);
-            }
-            catch (Exception ex)
-            {
-                Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                return PartialView("_Delete", model);
-            }
-        }
+        }        
 
         [HttpPost]
         public PartialViewResult AddImageItem(int OffSet, int Length)
@@ -449,119 +452,15 @@ namespace CMS_Web.Areas.Admin.Controllers
             catch (Exception) { }
             return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
-
-        public ActionResult Search()
+        
+        public ActionResult DeletePin(string ID)
         {
-            try
+            var msg = "";
+            var result = _fac.HidePin(ID, "Admin", ref msg);
+            if (result)
             {
-                var FilterModel = new PinFilterDTO();
-                FilterModel.PageIndex = Commons.PageIndex;
-                FilterModel.PageSize = Commons.PageSize;
-                FilterModel.CreatedDateFrom = null;
-                FilterModel.CreatedDateTo = null;
-               // var _Key = Request["Key"] ?? "";
-                var TypeTime = Request["TypeTime"] ?? "2";
-                //var Sort1 = Request["Sort1"] ?? "";
-                var Sort2 = Request["Sort2"] ?? "2";
-
-                //  var TypePin = Request["TypePin"] ?? "";
-                var _TypeQuantity = Request["TypeQuantity"];
-                int TypeQuantity = -1;
-                if (!string.IsNullOrEmpty(_TypeQuantity))
-                {
-                    TypeQuantity = Convert.ToInt16(_TypeQuantity);
-                }
-                var Keywords = Request["listKeywords"] ?? null;
-                char[] separator = new char[] { ',' };
-                var ListKeyword = CommonHelper.ParseStringToList(Keywords, separator);
-                var _FromDate = Convert.ToDateTime(Request["FromDate"]) ;
-                var _ToDate = Convert.ToDateTime(Request["ToDate"]);
-                #region "comment"
-                //cache data
-                //Response.Cookies["TypeTime"].Value = TypeTime.ToString();
-                //Response.Cookies["TypeTime"].Expires = DateTime.Now.AddYears(1); // add expiry time
-
-                //Response.Cookies["TypePin"].Value = TypePin.ToString();
-                //Response.Cookies["TypePin"].Expires = DateTime.Now.AddYears(1); // add expiry time
-
-                //Response.Cookies["FromDate"].Value = _FromDate.ToString();
-                //Response.Cookies["FromDate"].Expires = DateTime.Now.AddYears(1); // add expiry time
-                //Response.Cookies["ToDate"].Value = _ToDate.ToString();
-                //Response.Cookies["ToDate"].Expires = DateTime.Now.AddYears(1); // add expiry time
-                //if(TypeQuantity != 0)
-                //{
-                //    Response.Cookies["TypeQuantity"].Value = TypeQuantity.ToString();
-                //    Response.Cookies["TypeQuantity"].Expires = DateTime.Now.AddYears(1); // add expiry time
-                //}
-#endregion
-                FilterModel.CreatedAtFrom = _FromDate;
-                FilterModel.CreatedAtTo = _ToDate;
-
-                var _Group = Request["GroupID"] ?? "";
-                if (!string.IsNullOrEmpty(_Group))
-                {
-                    FilterModel.LstGroupID.Add(_Group);
-
-                    var _lstKeywords = getListKeyWordByGroup(_Group);
-                    FilterModel.LstKeyWordID.AddRange(_lstKeywords);
-                }
-
-                if (TypeQuantity.ToString() == Commons.EQuantityType.ZeroToOne.ToString("d"))
-                {
-                    FilterModel.PinCountFrom = 0;
-                    FilterModel.PinCountTo = 100;
-                }
-                if (TypeQuantity.ToString() == Commons.EQuantityType.OneToTwo.ToString("d"))
-                {
-                    FilterModel.PinCountFrom = 100;
-                    FilterModel.PinCountTo = 200;
-                }
-                if (TypeQuantity.ToString() == Commons.EQuantityType.TwoToThree.ToString("d"))
-                {
-                    FilterModel.PinCountFrom = 200;
-                    FilterModel.PinCountTo = 300;
-                }
-                if (TypeQuantity.ToString() == Commons.EQuantityType.ThreeToFour.ToString("d"))
-                {
-                    FilterModel.PinCountFrom = 300;
-                    FilterModel.PinCountTo = 400;
-                }
-                if (TypeQuantity.ToString() == Commons.EQuantityType.FourToFive.ToString("d"))
-                {
-                    FilterModel.PinCountFrom = 400;
-                    FilterModel.PinCountTo = 500;
-                }
-                if (TypeQuantity.ToString() == Commons.EQuantityType.MoreFive.ToString("d"))
-                {
-                    FilterModel.PinCountFrom = 500;
-                }
-
-                if (ListKeyword != null && ListKeyword.Count > 0)
-                {
-                    FilterModel.LstKeyWordID = ListKeyword;
-                   // Response.Cookies["Keywords"].Value = Keywords.ToString();
-                  //  Response.Cookies["Keywords"].Expires = DateTime.Now.AddYears(1); // add expiry time
-                }
-
-                FilterModel.TypeTime = TypeTime;
-                var tmp = 0;
-                int.TryParse(TypeTime, out tmp);
-                FilterModel.Sort1 = tmp;
-                int.TryParse(Sort2, out tmp);
-                FilterModel.Sort2 = tmp;
-
-                var modelCrawler = new CMS_CrawlerModels();
-                var _pinModels = new List<PinsModels>();
-                var msg = "";
-                int totalPin = 0;
-                var result = _fac.GetPin(ref _pinModels, ref totalPin, FilterModel, ref msg);
-                if (result)
-                {
-                    modelCrawler.Pins = _pinModels;
-                }
-                return PartialView("_ListItem", modelCrawler);
+                return new HttpStatusCodeResult(HttpStatusCode.OK);
             }
-            catch (Exception ex) { }
             return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
         }
     }

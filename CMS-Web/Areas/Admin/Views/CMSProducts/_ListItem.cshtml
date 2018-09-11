@@ -8,20 +8,22 @@
 </style>
 @if (Model != null && Model.Pins != null && Model.Pins.Any())
 {
-    <div class="form-group">
+    <div class="form-group" style="position: static; ">
         @foreach (var item in Model.Pins)
                 {
                     var ImageUrl = item.Images != null && item.Images.Count > 0 ? item.Images.FirstOrDefault().url : "";
-                    <div class="col-md-2 col-sm-2 col-xs-12" style="margin-bottom:20px;padding-top:10px;border:1px solid rgba(0,0,0,.1);border-radius:5px !important;height:500px;">
-                        <div style="margin-bottom:7px;">
+                    <div class="col-md-2 col-sm-2 col-xs-12" style="margin-bottom:20px;padding-top:10px;border:1px solid rgba(0,0,0,.1);border-radius:5px !important;height:500px; position: relative" id="@item.ID">
+                        <div style="margin-bottom:10px;">
                             @if (!string.IsNullOrEmpty(item.Link))
                             {
+                                <a class="fa fa-remove" style="right: 9px; position: absolute; font-size: 25px; background-color: red; color: #fff; padding: 5px; text-decoration: none;" title="Delete" onclick="DeletePin('@item.ID')"></a>
                                 <a href="@item.Link" target="_blank">
                                     <img src="@ImageUrl" class="img-responsive" alt="@item.Domain" height="236" style="border-radius:5px !important">
                                 </a>
                             }
                             else
                             {
+                                <a class="fa fa-remove" style="right: 9px; position: absolute; font-size: 25px; background-color: red; color: #fff; padding: 5px; text-decoration: none;" title="Delete" onclick="DeletePin('@item.ID')"></a>
                                 <a href="https://facebook.com/@item.ID/" target="_blank">
                                     <img src="@ImageUrl" class="img-responsive" alt="@item.Domain" height="236" style="border-radius:5px !important">
                                 </a>
@@ -54,3 +56,35 @@
     </div>
 }
 
+<script type="text/javascript">
+    function DeletePin(id) {
+        $.ajax(
+        {
+            url: '@Url.Action("DeletePin", "CMSProducts")',
+            type: 'get',
+            data: {
+                ID: id
+            },
+            dataType: 'html',
+            success: function () {
+                $('#' + id).hide();
+                $('.se-pre-con').hide();
+            },
+            beforeSend: function () {
+                $('.se-pre-con').show();
+            },
+            complete: function () {
+                $('.se-pre-con').hide();
+            },
+            error: function (e) {
+            if (e.status == 400) {
+                alert("Can not delete this Post!");
+            }
+            else {
+                $('#' + id).hide();
+            }
+            $('.se-pre-con').hide();
+            }
+        });
+    }
+</script>
