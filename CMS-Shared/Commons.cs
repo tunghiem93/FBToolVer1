@@ -86,6 +86,15 @@ namespace CMS_Shared
             Photo = 2,
             Video = 3
         }
+
+        public enum ETypePost
+        {
+            All = 0,
+            Photo = 1,
+            NoPhoto = 2,
+            Video = 3,
+            NoVideo = 3
+        }
         #endregion
 
         public static int WidthProduct = Convert.ToInt16(ConfigurationManager.AppSettings["WidthProduct"]);

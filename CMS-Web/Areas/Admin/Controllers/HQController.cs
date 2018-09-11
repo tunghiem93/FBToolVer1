@@ -145,5 +145,17 @@ namespace CMS_Web.Areas.Admin.Controllers
             }
             return lstString;
         }
+
+        public List<SelectListItem> getListTypePost()
+        {
+            var _lstTypePost = new List<SelectListItem>() {
+                new SelectListItem() { Text = "All", Value = Commons.ETypePost.All.ToString("d") },
+                new SelectListItem() { Text = "Photos", Value = Commons.ETypePost.Photo.ToString("d") },
+                new SelectListItem() { Text = "No Photos", Value = Commons.ETypePost.NoPhoto.ToString("d") },
+                new SelectListItem() { Text = "Videos", Value = Commons.ETypePost.Video.ToString("d") },
+                new SelectListItem() { Text = "No Videos", Value = Commons.ETypePost.NoVideo.ToString("d") },
+            };
+            return _lstTypePost;
+        }
     }
 }

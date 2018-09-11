@@ -84,6 +84,7 @@ namespace CMS_DTO.CMSCrawler
         public string TypeTime { get; set; }
         public int Sort1 { get; set; }
         public int Sort2 { get; set; }
+        public int TypePost { get; set; }
 
         public string Url { get; set; }
 

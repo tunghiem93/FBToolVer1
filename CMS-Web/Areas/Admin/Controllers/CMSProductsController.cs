@@ -40,6 +40,7 @@ namespace CMS_Web.Areas.Admin.Controllers
                 FilterModel.Sort2 = (byte)Commons.ESortType2.ReactionDecrease;
                 model.Sort2 = (byte)Commons.ESortType2.ReactionDecrease;
                 model.Index = int.Parse(Commons.EIndex.LikeReduce.ToString("d"));
+                model.TypePost = int.Parse(Commons.ETypePost.All.ToString("d"));
                 #region "Comment"
                 //if (Request.Cookies["FromDate"] != null)
                 //{
@@ -115,6 +116,7 @@ namespace CMS_Web.Areas.Admin.Controllers
                // model.ListRePin = getListRepinCount();
                 ViewBag.Keywords = getListKeyword();
                 ViewBag.ListGroupFanpage = getListGroupKeyword();
+                ViewBag.ListTypePost = getListTypePost();
                 if (!string.IsNullOrEmpty(_Key))
                 {
                     FilterModel.LstKeyWordID.Add(_Key);

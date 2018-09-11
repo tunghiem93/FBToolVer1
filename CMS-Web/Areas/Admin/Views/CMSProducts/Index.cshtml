@@ -56,17 +56,17 @@
                     </div>
 
                     @*Filter Post*@
-                    <div class="col-md-3 col-sm-3 col-xs-12 " style="width:15% !important; margin-left: -60px !important; ">
+                    <div class="col-md-2 col-sm-2 col-xs-12 " style=" margin-left: -60px !important; ">
                         <div class="input-prepend input-group" style="width:100%">
                             @Html.DropDownListFor(model => model.TypeTime,
-                    new SelectList(Model.ListTime, "Value", "Text", Model.TypeTime), "",
-                    new
-                    {
-                        @class = "form-control select2_multiple",
-                        @id = "storeDdlView",
-                        @style = "width:100%;",
-                        //@onChange = "ChangeDatetime(this);"
-                    })
+                            new SelectList(Model.ListTime, "Value", "Text", Model.TypeTime), "",
+                            new
+                            {
+                                @class = "form-control select2_multiple",
+                                @id = "storeDdlView",
+                                @style = "width:100%;",
+                                //@onChange = "ChangeDatetime(this);"
+                            })
                             @Html.ValidationMessageFor(model => model.TypeTime, null, new { @class = "label" })
                         </div>
                     </div>
@@ -75,41 +75,17 @@
                     <div class="col-md-7 col-sm-7 col-xs-12" style="margin-left: -15px !important; ">
                         <div class="input-prepend input-group" style="width:100%">
                             @Html.DropDownListFor(model => model.listKeywords,
-                    new SelectList(@ViewBag.Keywords, "Value", "Text", Model.listKeywords), "Filter by Keywords",
-                    new
-                    {
-                        @class = "form-control select2_multiple",
-                        @id = "KeywordsDdl",
-                        @style = "width : 100%;",
-                        @multiple = "multiple",
-                    })
+                            new SelectList(@ViewBag.Keywords, "Value", "Text", Model.listKeywords), "Filter by Keywords",
+                            new
+                            {
+                                @class = "form-control select2_multiple",
+                                @id = "KeywordsDdl",
+                                @style = "width : 100%;",
+                                @multiple = "multiple",
+                            })
                             @Html.ValidationMessageFor(model => model.listKeywords, null, new { @class = "label label-danger" })
                         </div>
                     </div>
-                   
-                    @*<div class="col-md-2 col-sm-2 col-xs-12 " style="width:13% !important">
-                        <div class="input-prepend input-group" style="width:100%">
-                            <input type="hidden" id="IsLoadData" value="0" />
-                            @Html.HiddenFor(model => model.ToDate, new { @class = "form-control datepicker1 has-feedback-left", @placeholder = "Từ ngày", @autocomplete = "off", @id = "txtToDate" })
-                            @Html.HiddenFor(model => model.FromDate, new { @class = "form-control datepicker1 has-feedback-left", @placeholder = "Từ ngày", @autocomplete = "off", @id = "txtFromDate" })
-                            @Html.DropDownListFor(model => model.TypeQuantity,
-                                new SelectList(Model.ListQuantity, "Value", "Text", Model.TypeQuantity), "",
-                                new
-                                {
-                                    @class = "form-control select2_multiple",
-                                    @id = "storeDdlViewQuantity",
-                                    @style = "width:100%;"
-                                })
-                            @Html.ValidationMessageFor(model => model.TypeQuantity, null, new { @class = "label" })
-                        </div>
-                        @Html.ValidationMessageFor(model => model.Board, null, new { @class = "label" })
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-md-1 col-sm-1 col-xs-12" style="width:4% !important">
-                            <button class="btn btn-primary" id="form-search"><i class="fa fa-search"></i>&nbsp;Load Data</button>
-                        </div>
-                    </div>*@
                 </div>
 
                 //Row 2
@@ -118,33 +94,17 @@
                     <div class="col-md-6 col-sm-6 col-xs-12" style="">
                         <div class="input-prepend input-group" style="width:100%">
                             @Html.DropDownListFor(model => model.GroupID,
-                    new SelectList(@ViewBag.ListGroupFanpage, "Value", "Text", Model.GroupID), "Filter by group keywords",
-                    new
-                    {
-                        @class = "form-control select2_multiple",
-                        @id = "GroupKeywordsDdl",
-                        @style = "width : 100%;",
-                        //@multiple = "multiple",
-                    })
+                            new SelectList(@ViewBag.ListGroupFanpage, "Value", "Text", Model.GroupID), "Filter by group keywords",
+                            new
+                            {
+                                @class = "form-control select2_multiple",
+                                @id = "GroupKeywordsDdl",
+                                @style = "width : 100%;",
+                                //@multiple = "multiple",
+                            })
                             @Html.ValidationMessageFor(model => model.GroupID, null, new { @class = "label label-danger" })
                         </div>
                     </div>
-
-                    @*<div class="col-md-2 col-sm-2 col-xs-12 " style="">
-                        <div class="input-prepend input-group" style="width:100%">
-                            @Html.DropDownListFor(model => model.Index,
-                                new SelectList(Model.ListIndex, "Value", "Text", Model.Index), "",
-                                new
-                                {
-                                    @class = "form-control select2_multiple",
-                                    @id = "storeDdlViewQuantity",
-                                    @style = "width:100%;"
-                                })
-                            @Html.ValidationMessageFor(model => model.Index, null, new { @class = "label" })
-                        </div>
-                        @Html.ValidationMessageFor(model => model.Index, null, new { @class = "label" })
-                    </div>*@
-
                     <div class="col-md-2 col-sm-2 col-xs-12 " style="">
                         <div class="input-prepend input-group" style="width:100%">
                             @Html.DropDownListFor(model => model.Sort2,
@@ -157,7 +117,19 @@
                                 })
                             @Html.ValidationMessageFor(model => model.Index, null, new { @class = "label" })
                         </div>
-                        @Html.ValidationMessageFor(model => model.Index, null, new { @class = "label" })
+                    </div>
+
+                    <div class="col-md-2 col-sm-2 col-xs-12 " style="">
+                        <div class="input-prepend input-group" style="width:100%">
+                            @Html.DropDownListFor(model => model.TypePost,
+                                new SelectList(@ViewBag.ListTypePost, "Value", "Text", Model.TypePost), "",
+                                new
+                                {
+                                    @class = "form-control select2_multiple",
+                                    @id = "TypePostDdl",
+                                    @style = "width:100%;"
+                                })
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -245,8 +217,8 @@
             allowClear: true
         });
 
-        $("#storeDdlViewPin").select2({
-
+        $("#TypePostDdl").select2({
+            //placeholder: "Then order by",
         })
 
         $("#KeywordsDdl").select2({
@@ -282,6 +254,7 @@
         var TypeTime = $("#storeDdlView").val();
         var LstKeyWordID = $("#KeywordsDdl").val();
         var SortData2 = $("#DdlSort2").val();
+        var TypePost = $("#TypePostDdl").val();
         var _url = window.location.href;
 
         var FilterModel = {
@@ -294,6 +267,7 @@
             TypeTime: TypeTime,
             Sort1: TypeTime,
             Sort2: SortData2,
+            TypePost: TypePost,
             Url : _url
         };
         if (TypeQuantity == @Commons.EQuantityType.ZeroToOne.ToString("d")) {
@@ -338,6 +312,7 @@
                 TypeTime: TypeTime,
                 Sort1: TypeTime,
                 Sort2: SortData2,
+                TypePost: TypePost,
                 Url: _url
             };
         }
