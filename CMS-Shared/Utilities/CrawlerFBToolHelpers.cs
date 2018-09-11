@@ -1,4 +1,5 @@
-﻿using HtmlAgilityPack;
+﻿using CMS_DTO.CMSCrawler;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
 using RestSharp;
 using System;
@@ -36,7 +37,10 @@ namespace CMS_Shared.Utilities
                     using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                     {
                         var data = streamReader.ReadToEnd();
-                        if(!string.IsNullOrEmpty(data))
+                        streamReader.Dispose();
+                        httpResponse.Dispose();
+
+                        if (!string.IsNullOrEmpty(data))
                         {
                             data = data.Replace("for (;;);", "");
                             var json = ParseJson(data);
@@ -81,7 +85,10 @@ namespace CMS_Shared.Utilities
             }
         }
 
-
+        /// <summary>
+        /// parse html tab video
+        /// </summary>
+        /// <param name="html"></param>
         public static void ParseHtmlVideo(string html)
         {
             try
@@ -249,6 +256,8 @@ namespace CMS_Shared.Utilities
                                 {
                                     VideoLink = "https://www.facebook.com"+VideoLink;
                                 }
+                                // link api detail
+                                var LinkApi = VideoLink;
                             }
 
                             var objImg = objImgVideo.Descendants().Where(o => o.Name == "img" && o.Attributes["class"] != null &&
@@ -335,6 +344,131 @@ namespace CMS_Shared.Utilities
             }
         }
 
+        public static void CrawlerDetail(string fbId)
+        {
+            try
+            {
+                //var Url = "https://www.facebook.com/adventuretime/photos/a.10151991558748383/10151991558983383/?type=3";
+                var Url = "https://www.facebook.com/10151991558983383";
+                Uri uri = new Uri(Url);
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
+                httpWebRequest.Headers["Cookie"] = "fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
+                httpWebRequest.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0";
+                httpWebRequest.Accept = "*/*";
+                httpWebRequest.Headers["Cache-Control"] = "no-cache";
+                httpWebRequest.Headers["Origin"] = "https://www.facebook.com";
+                httpWebRequest.Referer = "https://www.facebook.com";
+                httpWebRequest.Headers["upgrade-insecure-requests"] = "1";
+                httpWebRequest.Timeout = 9000000;
+                using (HttpWebResponse httpResponse = (HttpWebResponse)httpWebRequest.GetResponse())
+                {
+                    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                    {
+                        var html = streamReader.ReadToEnd();
+                        streamReader.Dispose();
+                        httpResponse.Dispose();
+
+                        HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                        doc.LoadHtml(html);
+                        /* FIND FEEDBACK_TARGET */
+                        var script = doc.DocumentNode.Descendants().Where(n => n.Name == "script").ToList();
+                        var innerScript = script.Where(o => !string.IsNullOrEmpty(o.InnerText) && o.InnerText.Contains("require(\"TimeSlice\").guard(function() {require(\"ServerJSDefine\")")).Select(o => o.InnerText).FirstOrDefault();
+                        PinsModels pin = new PinsModels();
+                        findNode(innerScript, "feedbacktarget", 0, "10151991558983383", ref pin);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                NSLog.Logger.Error("CrawlerDetail:", ex);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="key"></param>
+        /// <param name="start"></param>
+        /// <param name="fb_id"></param>
+        /// <param name="pin"></param>
+        /// <returns></returns>
+        public static bool findNode(string input, string key, int start, string fb_id, ref PinsModels pin)
+        {
+            var jsonfeedbacktarget = findElement(input, "feedbacktarget", 0);
+            if (string.IsNullOrEmpty(jsonfeedbacktarget))
+                return false;
+            try
+            {
+                var dobj = JsonConvert.DeserializeObject<JsonObject_v2>(jsonfeedbacktarget);
+                if (dobj != null)
+                {
+                    if (fb_id.Equals(dobj.entidentifier))
+                    {
+                        pin.commentTotalCount = dobj.commentcount;
+                        pin.sharecount = dobj.sharecount;
+                        pin.reactioncount = dobj.reactioncount;
+                        pin.ID = dobj.entidentifier;
+                        return true;
+                    }
+                    else
+                    {
+                        jsonfeedbacktarget = "\"feedbacktarget\":" + jsonfeedbacktarget;
+                        input = input.Replace(jsonfeedbacktarget, "");
+                        return findNode(input, key, start, fb_id, ref pin);
+                    }
+                }
+            }
+            catch (Exception ex) {
+                NSLog.Logger.Error("findNode:", ex);
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Find node json have like , shared , comment
+        /// </summary>
+        /// <param name="_input"></param>
+        /// <param name="key"></param>
+        /// <param name="start"></param>
+        /// <returns></returns>
+        public static string findElement(string _input, string key, int start)
+        {
+            var ret = "";
+            try
+            {
+                start = _input.IndexOf(key);
+                if (start > 0)
+                {
+                    var countLeftBreak = 0;
+                    var iEnd = 0;
+                    start = _input.IndexOf('{', start);
+                    for (int i = start; i < _input.Length; i++)
+                    {
+                        char ch = _input[i];
+                        if (ch == '}')
+                        {
+                            countLeftBreak--;
+                            if (countLeftBreak == 0)
+                            {
+                                iEnd = i;
+                                break;
+                            }
+                        }
+                        else if (ch == '{')
+                            countLeftBreak++;
+                    }
+
+                    if (iEnd > start)
+                        ret = _input.Substring(start, iEnd - start + 1);
+                }
+            }
+            catch (Exception ex) {
+                NSLog.Logger.Error("findElement:", ex);
+            };
+            return ret;
+        }
+
         /// <summary>
         /// parse data json from string 
         /// </summary>
@@ -415,7 +549,7 @@ namespace CMS_Shared.Utilities
                     tr = null,
                     is_trending = false,
                     callsite = "browse_ui:init_result_set",
-                    page_number = 2,
+                    page_number = 1,
                 };
                 return JsonConvert.SerializeObject(enc_q);
             }

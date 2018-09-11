@@ -84,6 +84,7 @@ namespace CMS_Shared
             Post = 0,
             People = 1,
             Photo = 2,
+            Video = 3
         }
         #endregion
 
