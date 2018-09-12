@@ -442,11 +442,11 @@ namespace CMS_Shared.Keyword
                             /* crawler tab post */
                             string q = "stories-public(stories-keyword("+keyWord.KeyWord+"))";
                             string ref_path = "/search/str/"+keyWord.KeyWord+"/stories-keyword/stories-public";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post, ref model);
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post,_cookie, ref model);
                             /* crawler tab people */
                             q = "stories-opinion(stories-keyword("+keyWord.KeyWord+"))";
                             ref_path = "/search/str/"+keyWord.KeyWord+"/stories-keyword/stories-opinion";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People, ref model);
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People,_cookie, ref model);
                             var res = false;
                             if (model.Pins.Count > 0)
                             {

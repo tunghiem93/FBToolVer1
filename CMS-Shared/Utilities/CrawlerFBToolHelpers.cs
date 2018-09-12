@@ -17,7 +17,7 @@ namespace CMS_Shared.Utilities
     {
         private static int PageSize = Commons.PageSize;
         private const string api_url = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrollingSetPagelet";
-        public static void CrawlerNow(string q,string ref_path,string view,byte type, ref CMS_CrawlerModels pins)
+        public static void CrawlerNow(string q,string ref_path,string view,byte type,string cookie, ref CMS_CrawlerModels pins)
         {
             try
             {
@@ -26,7 +26,8 @@ namespace CMS_Shared.Utilities
                 {
                     String timeStamp = DateTime.Now.ToString("yyyyMMddHHmmssffff");
                     var obj = _search_keyword_payload(q, ref_path, view,i,cursor);
-                    var url = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrollingSetPagelet?dpr=1&data=" + obj + "&__user=100003727776485&__a=1&__be=1&__pc=PHASED:DEFAULT&__spin_t=" + timeStamp + "";
+                    var userID = GetUserIDFromCookies(cookie);
+                    var url = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrollingSetPagelet?dpr=1&data=" + obj + "&__user="+ userID + "&__a=1&__be=1&__pc=PHASED:DEFAULT&__spin_t=" + timeStamp + "";
                     Uri uri = new Uri(url);
                     var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
                     httpWebRequest.Accept = "*/*";
@@ -35,7 +36,7 @@ namespace CMS_Shared.Utilities
                     httpWebRequest.Referer = "https://www.facebook.com";
                     httpWebRequest.Headers["upgrade-insecure-requests"] = "1";
                     httpWebRequest.UserAgent = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/62.0.3202.94 Chrome/62.0.3202.94 Safari/537.36";
-                    httpWebRequest.Headers["Cookie"] = "fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
+                    httpWebRequest.Headers["Cookie"] = cookie; //"fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
                     httpWebRequest.Timeout = 90000;
                     using (HttpWebResponse httpResponse = (HttpWebResponse)httpWebRequest.GetResponse())
                     {
@@ -137,6 +138,34 @@ namespace CMS_Shared.Utilities
             {
                 NSLog.Logger.Error("GetPin:", ex);
             }
+        }
+
+        /* get user ID from cookies */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cookie"></param>
+        /// <returns></returns>
+        private static string GetUserIDFromCookies(string cookie)
+        {
+            var ret = "";
+            if (!string.IsNullOrEmpty(cookie))
+            {
+                var start = cookie.IndexOf("c_user=");
+                var end = cookie.Length;
+                start = cookie.IndexOf("=", start) + 1;
+                for (int i = start; i < cookie.Length; i++)
+                {
+                    char key = cookie[i];
+                    if (key == ';')
+                    {
+                        end = i;
+                        break;
+                    }
+                }
+                ret = cookie.Substring(start, (end - start));
+            }
+            return ret;
         }
 
         /// <summary>
