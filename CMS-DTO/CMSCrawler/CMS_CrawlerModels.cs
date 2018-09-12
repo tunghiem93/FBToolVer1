@@ -41,6 +41,8 @@ namespace CMS_DTO.CMSCrawler
         public List<string> FbIds { get; set; }
         public bool IsDynamic { get; set; }
         public string LinkApi { get; set; }
+        public string LinkVideo { get; set; }
+        public int Type { get; set; }
         public PinsModels()
         {
             Board = new BoardModels();

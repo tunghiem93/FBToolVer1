@@ -53,6 +53,8 @@ namespace CMS_Entity.Entity
         public string UpdatedBy { get; set; }
 
         public DateTime? UpdatedDate { get; set; }
+        public int Type { get; set; }
+        public string LinkVideo { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CMS_R_KeyWord_Pin> CMS_R_KeyWord_Pin { get; set; }

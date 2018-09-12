@@ -82,6 +82,8 @@ namespace CMS_Shared.CMSEmployees
                             UpdatedBy = createdBy,
                             UpdatedDate = DateTime.Now,
                             DayCount = 1,
+                            Type = pin.Type,
+                            LinkVideo = pin.LinkVideo
                         });
 
                     }
