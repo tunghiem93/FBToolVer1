@@ -26,7 +26,7 @@ namespace CMS_Entity.Entity
 
         public int Repin_count { get; set; }
 
-        [StringLength(2000)]
+        //[StringLength(2000)]
         public string ImageUrl { get; set; }
 
         public DateTime Created_At { get; set; }
@@ -37,7 +37,7 @@ namespace CMS_Entity.Entity
         public int CommentCount { get; set; }
         public int DayCount { get; set; }
 
-        [StringLength(2000)]
+        //[StringLength(2000)]
         public string Description { get; set; }
         public string OwnerId { get; set; }
         public string OwnerName { get; set; }

@@ -82,6 +82,9 @@ namespace CMS_Shared.Utilities
                                         {
                                             ParseHtmlVideo(json, ref pins);
                                         }
+
+                                        if (string.IsNullOrEmpty(cursor))
+                                            break;
                                     }
                                 }
                             }
@@ -92,6 +95,71 @@ namespace CMS_Shared.Utilities
             catch(Exception ex)
             {
                 NSLog.Logger.Error("CrawlerNow : ", ex);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="jsmods"></param>
+        /// <param name="pin"></param>
+        public static void GetPhotoID(jsmods jsmods,string fbId, ref PinsModels pin)
+        {
+            try
+            {
+                if (jsmods != null)
+                {
+                    var require = jsmods.require.ToList();
+                    var data = require.Where(o => o.ToString().Contains("UFIController")).ToList();
+                    foreach (var item in data)
+                    {
+                        var s = item.ToString();
+                        var serializer = new JavaScriptSerializer();
+                        dynamic objs = serializer.Deserialize(s, typeof(object));
+                        if (objs != null)
+                        {
+                            var lastPin = objs[3][2];
+                            if (lastPin != null)
+                            {
+                                var feedbacktarget = lastPin["feedbacktarget"];
+                                var json = new JavaScriptSerializer().Serialize(feedbacktarget);
+                                feedbacktarget objPin = JsonConvert.DeserializeObject<feedbacktarget>(json);
+                                if (objPin != null)
+                                {
+                                    if (objPin.entidentifier.Equals(fbId))
+                                    {
+                                        var last = objs[3][1];
+                                        if (last != null)
+                                        {
+                                            var conversationGuideParams = last["conversationGuideParams"];
+                                            if (conversationGuideParams != null)
+                                            {
+                                                var strtrackingID = conversationGuideParams["trackingID"];
+                                                //var json = new JavaScriptSerializer().Serialize(strtrackingID);
+                                                conversationGuideParams objPhoto = JsonConvert.DeserializeObject<conversationGuideParams>(strtrackingID);
+                                                if (objPhoto != null)
+                                                {
+                                                    if (!string.IsNullOrEmpty(objPhoto.photo_id))
+                                                        pin.PhotoID = objPhoto.photo_id;
+
+                                                    if (objPhoto.photo_attachments_list != null && objPhoto.photo_attachments_list.Any())
+                                                    {
+                                                        pin.PhotoID = objPhoto.photo_attachments_list.FirstOrDefault();
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                NSLog.Logger.Error("GetPhotoID:", ex);
             }
         }
 
@@ -326,11 +394,52 @@ namespace CMS_Shared.Utilities
                                              .Where(x => (x.Name == "div" && x.Attributes["class"] != null &&
                                                    x.Attributes["class"].Value.Contains("_5bl2 _3u1 _41je _440e"))).ToList();
 
-                if(_mHtml != null && _mHtml.Any())
+                //var _mHtml = doc.DocumentNode.Descendants()
+                //                             .Where(x => (x.Name == "div" && x.Attributes["class"] != null &&
+                //                                   x.Attributes["class"].Value.Contains("_401d"))).ToList();
+
+                if (_mHtml != null && _mHtml.Any())
                 {
                     foreach(var mItem in _mHtml)
                     {
                         var pin = new PinsModels();
+                        /* get parent id */
+                        #region "get parrent id "
+                        //var ParentNode = mItem.ParentNode.OuterHtml;
+                        //if(ParentNode != null)
+                        //{
+                        //    var docParrent = new HtmlDocument();
+                        //    docParrent.LoadHtml(ParentNode);
+                        //    var _mParent = docParrent.DocumentNode.Descendants()
+                        //                                            .Where(o => o.Name == "div" && o.Attributes["class"] != null &&
+                        //                                                    o.Attributes["class"].Value.Contains("_401d")).FirstOrDefault();
+                        //    if(_mParent != null)
+                        //    {
+                        //        var strParentIds = _mParent.GetAttributeValue("data-gt", "");
+                        //        strParentIds = System.Web.HttpUtility.HtmlDecode(strParentIds);
+                        //        var serializer = new JavaScriptSerializer();
+                        //        dynamic objs = serializer.Deserialize(strParentIds, typeof(object));
+                        //        if(objs != null)
+                        //        {
+                        //            string strXt = objs["xt"];
+                        //            if (!string.IsNullOrEmpty(strXt))
+                        //            {
+                        //                var firstIndex = strXt.IndexOf('{');
+                        //                strXt = strXt.Substring(firstIndex);
+                        //                if(!string.IsNullOrEmpty(strXt))
+                        //                {
+                        //                    var _jsonId = JsonConvert.DeserializeObject<JsonData>(strXt);
+                        //                    if (_jsonId != null)
+                        //                    {
+                        //                        var parentId = _jsonId.unit_id_result_id;
+                        //                        pin.ParentID = parentId;
+                        //                    }
+                        //                }
+                        //            }
+                        //        }
+                        //    }
+                        //}
+#endregion
                         /* get id */
                         var strIds = mItem.GetAttributeValue("data-bt", "");
                         strIds = System.Web.HttpUtility.HtmlDecode(strIds);
@@ -384,20 +493,27 @@ namespace CMS_Shared.Utilities
                                                                      o.Attributes["class"].Value.Contains("_5-0i")).FirstOrDefault();
                         if(objImgVideo != null)
                         {
-                            var objVideo = objImgVideo.Descendants("a").FirstOrDefault();
-                            if(objVideo != null)
+                            /* check video or image */
+                            var IsCheck = objImgVideo.GetAttributeValue("aria-label", "").Equals("Video Link");
+                            if(IsCheck)
                             {
-                                var VideoLink = objVideo.GetAttributeValue("href", "");
-                                if(!string.IsNullOrEmpty(VideoLink))
+                                var objVideo = objImgVideo.Descendants("a").FirstOrDefault();
+                                if (objVideo != null)
                                 {
-                                    VideoLink = "https://www.facebook.com"+VideoLink;
+                                    var VideoLink = objVideo.GetAttributeValue("href", "");
+                                    if (!string.IsNullOrEmpty(VideoLink))
+                                    {
+                                        VideoLink = "https://www.facebook.com" + VideoLink;
+                                    }
+                                    // link api detail
+                                    var LinkApi = VideoLink;
+                                    
                                 }
-                                // link api detail
-                                var LinkApi = VideoLink;
                             }
+                            
 
                             var objImg = objImgVideo.Descendants().Where(o => o.Name == "img" && o.Attributes["class"] != null &&
-                                                                     o.Attributes["class"].Value.Contains("scaledImageFitWidth")).FirstOrDefault();
+                                                                     o.Attributes["class"].Value.Contains("img")).FirstOrDefault();
                             if(objImg != null)
                             {
                                 var ImageUrl = objImg.GetAttributeValue("src", "");
@@ -409,6 +525,9 @@ namespace CMS_Shared.Utilities
                             }
                             if (!string.IsNullOrEmpty(pin.ID))
                             {
+                                // CrawlerDetail(pin.ID, ref pin);
+                                // GetPin(json.jsmods, pin.ID, ref pin);
+                                GetPhotoID(json.jsmods,pin.ID, ref pin);
                                 GetPin(json.jsmods, pin.ID, ref pin);
                                 pin.Type = type;
                                 pins.Pins.Add(pin);
@@ -500,8 +619,7 @@ namespace CMS_Shared.Utilities
         {
             try
             {
-                //var Url = "https://www.facebook.com/adventuretime/photos/a.10151991558748383/10151991558983383/?type=3";
-                var Url = "https://www.facebook.com/"+fbId;
+                var Url = "https://www.facebook.com/ajax/pagelet/generic.php/PhotoViewerInitPagelet?dpr=1&fb_dtsg_ag=AdwP2CkmxqbthyUwtuNGyntNwoZnRqeWS0c-ybaoDCyvqg%3AAdxaAcHQyTfiHpCrGBxNeQxTkMKM_AQsNq70bpE_Vat-gQ&ajaxpipe=1&ajaxpipe_token=AXhBRNxR61W2G51W&no_script_path=1&data={\"fbid\":"+fbId+",\"set\":\"p."+fbId+"\",\"type\":\"1\",\"theater\":null,\"firstLoad\":true,\"ssid\":1536763892151}&__user=100003727776485&__a=1&__dyn=7AgNe-4amaxx2u6Xolg9obHGiqEW8xdLFwxx-6EeAq2i5U4e2C3-7WyUcWwIKaxeUW3Kag4idwJx64e3W9xicwJwpUiwBx61zwzwno8o2fDBw9-6rGUogc8rwFwgE467Uy2adwRwGxO4p8gy85Ofy946e4oC2bixK8Cgepo-cGcBK2C6U4W10Gu15ghyEgx2UTwEwFyFE-3e4U9ogwJw&__req=jsonp_2&__be=1&__pc=PHASED%3ADEFAULT&__rev=4303580&__spin_r=4303580&__spin_b=trunk&__spin_t=1536763736&__adt=2";
                 Uri uri = new Uri(Url);
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
                 httpWebRequest.Headers["Cookie"] = "fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
@@ -524,8 +642,17 @@ namespace CMS_Shared.Utilities
                         doc.LoadHtml(html);
                         /* FIND FEEDBACK_TARGET */
                         var script = doc.DocumentNode.Descendants().Where(n => n.Name == "script").ToList();
-                        var innerScript = script.Where(o => !string.IsNullOrEmpty(o.InnerText) && o.InnerText.Contains("require(\"TimeSlice\").guard(function() {require(\"ServerJSDefine\")")).Select(o => o.InnerText).FirstOrDefault();
-                        findNode(innerScript, "feedbacktarget", 0, fbId, ref pin);
+                        //var innerScript = script.Where(o => !string.IsNullOrEmpty(o.InnerText) && o.InnerText.Contains("require(\"TimeSlice\").guard(function() {require(\"ServerJSDefine\")")).Select(o => o.InnerText).FirstOrDefault();
+                        var innerScript = script.Where(o => !string.IsNullOrEmpty(o.InnerText) && o.InnerText.Contains("if (self != top)")).Select(o => o.InnerText).ToList();
+                        if(innerScript != null && innerScript.Any())
+                        {
+                            foreach(var item in innerScript)
+                            {
+                                findNode(item, "feedbacktarget", 0, fbId, ref pin);
+                            }
+                            
+                        }
+                        
                     }
                 }
             }
@@ -554,20 +681,25 @@ namespace CMS_Shared.Utilities
                 var dobj = JsonConvert.DeserializeObject<JsonObject_v2>(jsonfeedbacktarget);
                 if (dobj != null)
                 {
-                    if (fb_id.Equals(dobj.entidentifier))
-                    {
-                        pin.commentTotalCount = dobj.commentcount;
-                        pin.sharecount = dobj.sharecount;
-                        pin.reactioncount = dobj.reactioncount;
-                        pin.ID = dobj.entidentifier;
-                        return true;
-                    }
-                    else
-                    {
-                        jsonfeedbacktarget = "\"feedbacktarget\":" + jsonfeedbacktarget;
-                        input = input.Replace(jsonfeedbacktarget, "");
-                        return findNode(input, key, start, fb_id, ref pin);
-                    }
+                    pin.commentTotalCount = dobj.commentcount;
+                    pin.sharecount = dobj.sharecount;
+                    pin.reactioncount = dobj.reactioncount;
+                    pin.ID = dobj.entidentifier;
+                    return true;
+                    //if (fb_id.Equals(dobj.entidentifier))
+                    //{
+                    //    pin.commentTotalCount = dobj.commentcount;
+                    //    pin.sharecount = dobj.sharecount;
+                    //    pin.reactioncount = dobj.reactioncount;
+                    //    pin.ID = dobj.entidentifier;
+                    //    return true;
+                    //}
+                    //else
+                    //{
+                    //    jsonfeedbacktarget = "\"feedbacktarget\":" + jsonfeedbacktarget;
+                    //    input = input.Replace(jsonfeedbacktarget, "");
+                    //    return findNode(input, key, start, fb_id, ref pin);
+                    //}
                 }
             }
             catch (Exception ex) {
@@ -776,6 +908,7 @@ namespace CMS_Shared.Utilities
         public string payload { get; set; }
         public jsmods jsmods { get; set; }
         public string id { get; set; }
+        public string unit_id_result_id { get; set; }
     }
 
     public class jsmods
@@ -789,6 +922,17 @@ namespace CMS_Shared.Utilities
         public int reactioncount { get; set; }
         public int sharecount { get; set; }
         public int commentcount { get; set; }
+    }
+
+    public class conversationGuideParams
+    {
+        public List<string> photo_attachments_list { get; set; }
+        public string photo_id { get; set; }
+
+        public conversationGuideParams()
+        {
+            photo_attachments_list = new List<string>();
+        }
     }
 }
 

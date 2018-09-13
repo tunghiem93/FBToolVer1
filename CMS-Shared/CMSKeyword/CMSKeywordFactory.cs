@@ -450,6 +450,12 @@ namespace CMS_Shared.Keyword
                             var res = false;
                             if (model.Pins.Count > 0)
                             {
+                                var options = new ParallelOptions { MaxDegreeOfParallelism = 5 };
+                                Parallel.ForEach(model.Pins, options , pin =>
+                                 {
+                                     CrawlerFBToolHelpers.CrawlerDetail(pin.PhotoID, ref pin);
+                                 });
+                                NSLog.Logger.Info("done crawler : ", model.Pins.Count);
                                 res = _fac.CreateOrUpdate(model.Pins, keyWord.ID, createdBy, ref msg);
                             }
 

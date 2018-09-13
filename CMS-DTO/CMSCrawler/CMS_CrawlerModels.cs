@@ -29,6 +29,7 @@ namespace CMS_DTO.CMSCrawler
         public int sharecount { get; set; }
         public int DayCount { get; set; }
         public string ID { get; set; }
+        public string ParentID { get; set; }
         public string OwnerID { get; set; }
         public string OwnerName { get; set; }
         public string Description { get; set; }
@@ -43,6 +44,7 @@ namespace CMS_DTO.CMSCrawler
         public string LinkApi { get; set; }
         public string LinkVideo { get; set; }
         public int Type { get; set; }
+        public string PhotoID { get; set; }
         public PinsModels()
         {
             Board = new BoardModels();
