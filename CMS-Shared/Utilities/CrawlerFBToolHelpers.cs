@@ -84,7 +84,11 @@ namespace CMS_Shared.Utilities
                                         }
 
                                         if (string.IsNullOrEmpty(cursor))
+                                        {
+                                            NSLog.Logger.Info("Page Size :", i);
                                             break;
+                                        }
+                                           
                                     }
                                 }
                             }

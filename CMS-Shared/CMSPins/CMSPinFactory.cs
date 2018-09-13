@@ -20,7 +20,7 @@ namespace CMS_Shared.CMSEmployees
 
         public bool CreateOrUpdate(List<PinsModels> lstPin, string KeyWordID, string createdBy, ref string msg)
         {
-            NSLog.Logger.Info("CreateOrUpdatePin: " + KeyWordID, lstPin);
+            NSLog.Logger.Info("CreateOrUpdatePin: " + KeyWordID, lstPin.Count);
             var result = true;
 
             m_Semaphore.WaitOne();
@@ -31,6 +31,7 @@ namespace CMS_Shared.CMSEmployees
                     _db.Database.CommandTimeout = 500;
                     lstPin = lstPin.GroupBy(x => x.ID).Select(x => x.First()).ToList();
                     lstPin = lstPin.Where(x => !string.IsNullOrEmpty(x.ID) && x.ID.Length <= 60).ToList();
+                    NSLog.Logger.Info("CreateOrUpdatePin_last: " + KeyWordID, lstPin.Count);
                     var lstPinID = lstPin.Select(o => o.ID).ToList();
                     var lstPinUpdate = _db.CMS_Pin.Where(o => lstPinID.Contains(o.ID)).ToList();
                     var lstPinUpdateID = lstPinUpdate.Select(o => o.ID).ToList();

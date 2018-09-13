@@ -7,6 +7,7 @@ using CMS_Shared.Utilities;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -440,22 +441,36 @@ namespace CMS_Shared.Keyword
                             var listCookie = listAcc.Select(x => x.Cookies).ToList();
                             var _cookie = CommonHelper.RamdomCookie(listCookie);
                             /* crawler tab post */
+                            var modelPost = new CMS_CrawlerModels();
                             string q = "stories-public(stories-keyword("+keyWord.KeyWord+"))";
                             string ref_path = "/search/str/"+keyWord.KeyWord+"/stories-keyword/stories-public";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post,_cookie, ref model);
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post,_cookie, ref modelPost);
+                            NSLog.Logger.Info("done crawler tab post : ", modelPost.Pins.Count);
+                            if (modelPost.Pins != null && modelPost.Pins.Any())
+                                model.Pins.AddRange(modelPost.Pins);
                             /* crawler tab people */
+                            var modelPeople = new CMS_CrawlerModels();
                             q = "stories-opinion(stories-keyword("+keyWord.KeyWord+"))";
                             ref_path = "/search/str/"+keyWord.KeyWord+"/stories-keyword/stories-opinion";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People,_cookie, ref model);
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People,_cookie, ref modelPeople);
+                            NSLog.Logger.Info("done crawler tab people : ", modelPeople.Pins.Count);
+                            if (modelPeople.Pins != null && modelPeople.Pins.Any())
+                                model.Pins.AddRange(modelPeople.Pins);
+                            var lastdate = DateTime.Now.AddDays(-7);
+                            var datenow = DateTime.Now;
                             var res = false;
                             if (model.Pins.Count > 0)
                             {
+                                NSLog.Logger.Info("done crawler before 7 days ago : ", model.Pins.Count);
+                                /* check 7 days ago */
+                                model.Pins = model.Pins.Where(o => o.Created_At >= lastdate && o.Created_At <= datenow).ToList();
+                                NSLog.Logger.Info("done crawler after 7 days ago : ", model.Pins.Count);
                                 var options = new ParallelOptions { MaxDegreeOfParallelism = 5 };
                                 Parallel.ForEach(model.Pins, options , pin =>
                                  {
                                      CrawlerFBToolHelpers.CrawlerDetail(pin.PhotoID, ref pin);
                                  });
-                                NSLog.Logger.Info("done crawler : ", model.Pins.Count);
+                                
                                 res = _fac.CreateOrUpdate(model.Pins, keyWord.ID, createdBy, ref msg);
                             }
 
