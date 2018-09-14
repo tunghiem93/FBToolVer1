@@ -176,7 +176,7 @@ namespace CMS_Web.Areas.Admin.Controllers
                 var TypeTime = Request["TypeTime"] ?? "2";
                 //var Sort1 = Request["Sort1"] ?? "";
                 var Sort2 = Request["Sort2"] ?? "2";
-
+                var TypePost = Request["TypePost"] ?? "0";
                 //  var TypePin = Request["TypePin"] ?? "";
                 var _TypeQuantity = Request["TypeQuantity"];
                 int TypeQuantity = -1;
@@ -262,6 +262,8 @@ namespace CMS_Web.Areas.Admin.Controllers
                 FilterModel.Sort1 = tmp;
                 int.TryParse(Sort2, out tmp);
                 FilterModel.Sort2 = tmp;
+                int.TryParse(TypePost, out tmp);
+                FilterModel.TypePost = tmp;
 
                 var modelCrawler = new CMS_CrawlerModels();
                 var _pinModels = new List<PinsModels>();

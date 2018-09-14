@@ -39,15 +39,19 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div class="info-domain" style="background-color:#cce5ff;border-radius:5px !important;min-height:50px; margin-bottom: -5px !important; vertical-align: middle; overflow: auto">
-                                &nbsp;&nbsp;<a href="@string.Format("{0}",string.IsNullOrEmpty(item.Link) ? "javascript:void(0)" : item.Link)" style="color:#004085;font-weight:bold; text-decoration: none" target="_blank" title="@item.Link">@string.Format("{0}", !string.IsNullOrEmpty(item.OwnerName) && item.OwnerName.Length > 20 ? item.OwnerName.Substring(0, 20) + "..." : item.OwnerName)<span style="vertical-align: super;"><br />&nbsp;&nbsp; @item.Created_At.ToString("dd/MM/yyyy")</span></a>
-
+                            <div class="info-domain" style="background-color:#cce5ff;border-radius:1px !important;min-height:50px; vertical-align: middle; overflow: auto">
+                                <table>
+                                    <tr>
+                                        <td style="padding-right: 10px; "><img src="@item.AvatarUrl" /></td>
+                                        <td style="font-size: 12px;"><a href="@string.Format("{0}",string.IsNullOrEmpty(item.Link) ? "javascript:void(0)" : item.Link)" style="color:#004085;font-weight:bold; text-decoration: none" target="_blank" title="@item.Link">@string.Format("{0}", !string.IsNullOrEmpty(item.OwnerName) && item.OwnerName.Length > 20 ? item.OwnerName.Substring(0, 20) + "..." : item.OwnerName)<span style="vertical-align: super;"><br />&nbsp;&nbsp; @item.Created_At.ToString("dd/MM/yyyy")</span></a></td>
+                                    </tr>
+                                </table>
                             </div>
                             @if (item.Description != null && item.Description.Length > 0)
                             {
                                 <div style=" background-color:#d4edda;border-radius:5px !important; margin-bottom: -5px !important; padding-left: 5px; padding-right: 5px;height:150px; display: -webkit-box; overflow: overlay;">
                                     <p>
-                                        @item.Description
+                                        @Html.Raw(item.Description)
                                     @*@string.Format("{0}", !string.IsNullOrEmpty(item.Description) && item.Description.Length > 70 ? item.Description.Substring(0, 70) + "..." : item.Description)*@
                                     </p>
                                 </div>
