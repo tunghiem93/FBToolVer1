@@ -85,7 +85,8 @@ namespace CMS_Shared.CMSEmployees
                             DayCount = 1,
                             Type = pin.Type,
                             LinkVideo = pin.LinkVideo,
-                            KeyWord = KeyWord
+                            KeyWord = KeyWord,
+                            AvatarUrl = pin.AvatarUrl
                         });
 
                     }
@@ -253,6 +254,7 @@ namespace CMS_Shared.CMSEmployees
                         DayCount = o.DayCount,
                         OwnerName = o.OwnerName,
                         KeyWord = o.KeyWord,
+                        AvatarUrl = o.AvatarUrl
                         //LastTime = CommonHelper.GetDurationFromNow(o.UpdatedDate),
                     }).ToList();
                 }

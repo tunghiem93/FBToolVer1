@@ -453,6 +453,7 @@ namespace CMS_Shared.Utilities
                             {
                                 var Id = _jsonId.id;
                                 pin.ID = Id;
+                                pin.Type = type;
                             }
                         }
 
@@ -468,6 +469,19 @@ namespace CMS_Shared.Utilities
                                 pin.OwnerName = OwnerName;
                             }
                             var OwnerHref = objOwnerName.GetAttributeValue("href", "");
+                        }
+
+                        /* get when post video */
+                        if (string.IsNullOrEmpty(pin.OwnerName))
+                        {
+                            var tagOwnerName = doc.DocumentNode.Descendants().Where(o => o.Name == "a" && o.Attributes["class"] != null
+                                                       && o.Attributes["class"].Value.Contains("profileLink")).FirstOrDefault();
+
+                            if (tagOwnerName != null)
+                            {
+                                var ownerName = tagOwnerName.InnerText;
+                                pin.OwnerName = ownerName;
+                            }
                         }
 
                         /* get time */
@@ -512,6 +526,7 @@ namespace CMS_Shared.Utilities
                                     var LinkApi = VideoLink;
                                     
                                 }
+                                pin.Type = (int)Commons.EType.Video;
                             }
                             
 
@@ -532,7 +547,6 @@ namespace CMS_Shared.Utilities
                                 // GetPin(json.jsmods, pin.ID, ref pin);
                                 GetPhotoID(json.jsmods,pin.ID, ref pin);
                                 GetPin(json.jsmods, pin.ID, ref pin);
-                                pin.Type = type;
                                 pins.Pins.Add(pin);
                             }
                         }
@@ -701,14 +715,38 @@ namespace CMS_Shared.Utilities
                             var Created_At = dtDateTime.AddSeconds(double.Parse(timeStamp)).ToLocalTime();
                             pin.Created_At = Created_At;
                         }
+                    }
+                    var tagSpan = doc.DocumentNode.Descendants().Where(o => o.Name == "span" && o.Attributes["class"] != null
+                                                    && o.Attributes["class"].Value.Contains("hasCaption")).FirstOrDefault();
+                    if (tagSpan != null)
+                    {
+                        //pin.Description = tagSpan.InnerHtml;
+                        pin.Description = tagSpan.InnerText;
+                    }
 
-                        var tagSpan = doc.DocumentNode.Descendants().Where(o => o.Name == "span" && o.Attributes["class"] != null
-                                                                            && o.Attributes["class"].Value.Contains("hasCaption")).FirstOrDefault();
-                        if (tagSpan != null)
+                    if(string.IsNullOrEmpty(pin.OwnerName))
+                    {
+                        var tagOwnerName = doc.DocumentNode.Descendants().Where(o => o.Name == "div" && o.Attributes["class"] != null
+                                                    && o.Attributes["class"].Value.Contains("fbPhotoContributorName")).FirstOrDefault();
+
+                        if(tagOwnerName != null)
                         {
-                            //pin.Description = tagSpan.InnerHtml;
-                            pin.Description = tagSpan.InnerText;
+                            var tagAOwnerName = tagOwnerName.Descendants("a").FirstOrDefault();
+                            if(tagAOwnerName != null)
+                            {
+                                var ownerName = tagAOwnerName.InnerText;
+                                pin.OwnerName = ownerName;
+                            }
                         }
+                    }
+                    
+
+                    var tagAvatar = doc.DocumentNode.Descendants().Where(o => o.Name == "img" && o.Attributes["class"] != null
+                                                    && o.Attributes["class"].Value.Contains("_s0 _4ooo _5xib _5sq7 _44ma _rw img")).FirstOrDefault();
+                    if(tagAvatar != null)
+                    {
+                        var avatar = tagAvatar.GetAttributeValue("src", "");
+                        pin.AvatarUrl = avatar;
                     }
                 }
             }
