@@ -55,6 +55,8 @@ namespace CMS_Entity.Entity
         public DateTime? UpdatedDate { get; set; }
         public int Type { get; set; }
         public string LinkVideo { get; set; }
+        [StringLength(2000)]
+        public string KeyWord { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CMS_R_KeyWord_Pin> CMS_R_KeyWord_Pin { get; set; }

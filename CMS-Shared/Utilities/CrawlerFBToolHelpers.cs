@@ -15,9 +15,8 @@ namespace CMS_Shared.Utilities
 {
     public class CrawlerFBToolHelpers
     {
-        private static int PageSize = Commons.PageSize;
         private const string api_url = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrollingSetPagelet";
-        public static void CrawlerNow(string q,string ref_path,string view,byte type,string cookie, ref CMS_CrawlerModels pins)
+        public static void CrawlerNow(string q,string ref_path,string view,byte type,string cookie,int PageSize, ref CMS_CrawlerModels pins)
         {
             try
             {
@@ -607,7 +606,10 @@ namespace CMS_Shared.Utilities
                         /* end get by */
                         if(!string.IsNullOrEmpty(pin.ID))
                         {
-                            GetPin(json.jsmods, pin.ID, ref pin);
+                            //GetPin(json.jsmods, pin.ID, ref pin);
+                            //GetPhotoID(json.jsmods, pin.ID, ref pin);
+                            pin.Type = (int)Commons.EType.Photo;
+                            pin.PhotoID = pin.ID;
                             pins.Pins.Add(pin);
                         }
                     }
@@ -619,14 +621,15 @@ namespace CMS_Shared.Utilities
             }
         }
 
-        public static void CrawlerDetail(string fbId,ref PinsModels pin)
+        public static void CrawlerDetail(string fbId, string cookie,byte type, ref PinsModels pin)
         {
             try
             {
-                var Url = "https://www.facebook.com/ajax/pagelet/generic.php/PhotoViewerInitPagelet?dpr=1&fb_dtsg_ag=AdwP2CkmxqbthyUwtuNGyntNwoZnRqeWS0c-ybaoDCyvqg%3AAdxaAcHQyTfiHpCrGBxNeQxTkMKM_AQsNq70bpE_Vat-gQ&ajaxpipe=1&ajaxpipe_token=AXhBRNxR61W2G51W&no_script_path=1&data={\"fbid\":"+fbId+",\"set\":\"p."+fbId+"\",\"type\":\"1\",\"theater\":null,\"firstLoad\":true,\"ssid\":1536763892151}&__user=100003727776485&__a=1&__dyn=7AgNe-4amaxx2u6Xolg9obHGiqEW8xdLFwxx-6EeAq2i5U4e2C3-7WyUcWwIKaxeUW3Kag4idwJx64e3W9xicwJwpUiwBx61zwzwno8o2fDBw9-6rGUogc8rwFwgE467Uy2adwRwGxO4p8gy85Ofy946e4oC2bixK8Cgepo-cGcBK2C6U4W10Gu15ghyEgx2UTwEwFyFE-3e4U9ogwJw&__req=jsonp_2&__be=1&__pc=PHASED%3ADEFAULT&__rev=4303580&__spin_r=4303580&__spin_b=trunk&__spin_t=1536763736&__adt=2";
+                var userID = GetUserIDFromCookies(cookie);
+                var Url = "https://www.facebook.com/ajax/pagelet/generic.php/PhotoViewerInitPagelet?dpr=1&fb_dtsg_ag=AdwP2CkmxqbthyUwtuNGyntNwoZnRqeWS0c-ybaoDCyvqg%3AAdxaAcHQyTfiHpCrGBxNeQxTkMKM_AQsNq70bpE_Vat-gQ&ajaxpipe=1&ajaxpipe_token=AXhBRNxR61W2G51W&no_script_path=1&data={\"fbid\":"+fbId+",\"set\":\"p."+fbId+"\",\"type\":\"1\",\"theater\":null,\"firstLoad\":true,\"ssid\":1536763892151}&__user="+ userID + "&__a=1&__dyn=7AgNe-4amaxx2u6Xolg9obHGiqEW8xdLFwxx-6EeAq2i5U4e2C3-7WyUcWwIKaxeUW3Kag4idwJx64e3W9xicwJwpUiwBx61zwzwno8o2fDBw9-6rGUogc8rwFwgE467Uy2adwRwGxO4p8gy85Ofy946e4oC2bixK8Cgepo-cGcBK2C6U4W10Gu15ghyEgx2UTwEwFyFE-3e4U9ogwJw&__req=jsonp_2&__be=1&__pc=PHASED%3ADEFAULT&__rev=4303580&__spin_r=4303580&__spin_b=trunk&__spin_t=1536763736&__adt=2";
                 Uri uri = new Uri(Url);
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
-                httpWebRequest.Headers["Cookie"] = "fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
+                httpWebRequest.Headers["Cookie"] = cookie; //"fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
                 httpWebRequest.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0";
                 httpWebRequest.Accept = "*/*";
                 httpWebRequest.Headers["Cache-Control"] = "no-cache";
@@ -644,15 +647,17 @@ namespace CMS_Shared.Utilities
 
                         HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
                         doc.LoadHtml(html);
+
                         /* FIND FEEDBACK_TARGET */
                         var script = doc.DocumentNode.Descendants().Where(n => n.Name == "script").ToList();
                         //var innerScript = script.Where(o => !string.IsNullOrEmpty(o.InnerText) && o.InnerText.Contains("require(\"TimeSlice\").guard(function() {require(\"ServerJSDefine\")")).Select(o => o.InnerText).FirstOrDefault();
                         var innerScript = script.Where(o => !string.IsNullOrEmpty(o.InnerText) && o.InnerText.Contains("if (self != top)")).Select(o => o.InnerText).ToList();
                         if(innerScript != null && innerScript.Any())
                         {
-                            foreach(var item in innerScript)
+                            foreach (var item in innerScript)
                             {
-                                findNode(item, "feedbacktarget", 0, fbId, ref pin);
+                                findNode(item, "feedbacktarget", 0, fbId, type, ref pin);
+                                findImage(item, ref pin);
                             }
                             
                         }
@@ -670,12 +675,116 @@ namespace CMS_Shared.Utilities
         /// 
         /// </summary>
         /// <param name="input"></param>
+        /// <param name="type"></param>
+        /// <param name="pin"></param>
+        public static void findNodeHtml(string input,byte type, ref PinsModels pin)
+        {
+            var html = findElement(input, "__markup_9fc087ed_jsonp_2_0", 0);
+            if(!string.IsNullOrEmpty(html))
+            {
+                var mJson = JsonConvert.DeserializeObject<JsonData>(html);
+                if(mJson != null)
+                {
+                    var mHtml = mJson.__html;
+                    HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
+                    doc.LoadHtml(mHtml);
+
+                    if (type == (byte)Commons.EType.Photo)
+                    {
+                        var tagA = doc.DocumentNode.Descendants().Where(o => o.Name == "a" && o.Attributes["class"] != null
+                                                                        && o.Attributes["class"].Value.Contains("_39g5")).FirstOrDefault();
+                        if (tagA != null)
+                        {
+                            var abbr = tagA.Descendants("abbr").FirstOrDefault();
+                            var timeStamp = abbr.GetAttributeValue("data-utime", "");
+                            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+                            var Created_At = dtDateTime.AddSeconds(double.Parse(timeStamp)).ToLocalTime();
+                            pin.Created_At = Created_At;
+                        }
+
+                        var tagSpan = doc.DocumentNode.Descendants().Where(o => o.Name == "span" && o.Attributes["class"] != null
+                                                                            && o.Attributes["class"].Value.Contains("hasCaption")).FirstOrDefault();
+                        if (tagSpan != null)
+                        {
+                            //pin.Description = tagSpan.InnerHtml;
+                            pin.Description = tagSpan.InnerText;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        public static void findImage(string input,ref PinsModels pin)
+        {
+            try
+            {
+                var html = findElement(input, "image", 0);
+                if(!string.IsNullOrEmpty(html) && html.Contains("dimensions"))
+                {
+                    if (!string.IsNullOrEmpty(html))
+                    {
+                        var serializer = new JavaScriptSerializer();
+                        dynamic objs = serializer.Deserialize(html, typeof(object));
+                        objs = objs as Dictionary<string, dynamic>;
+                        if (objs != null)
+                        {
+                            if(objs.ContainsKey("image"))
+                            {
+                                var noteImage = objs["image"] as Dictionary<string,dynamic>;
+                                if(noteImage != null)
+                                {
+                                    if (noteImage.ContainsKey(pin.PhotoID))
+                                    {
+                                        var key = noteImage[pin.PhotoID];
+                                        if (key != null)
+                                        {
+                                            var image = key["url"];
+                                            if (!string.IsNullOrEmpty(image))
+                                                pin.ImageURL = image;
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (objs.ContainsKey(pin.PhotoID))
+                                {
+                                    var key = objs[pin.PhotoID];
+                                    if (key != null)
+                                    {
+                                        var image = key["url"];
+                                        if (!string.IsNullOrEmpty(image))
+                                            pin.ImageURL = image;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    input = input.Replace(html, "");
+                    findImage(input, ref pin);
+                }
+
+            }
+            catch(Exception ex)
+            {
+                NSLog.Logger.Error("findImage :", ex);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="input"></param>
         /// <param name="key"></param>
         /// <param name="start"></param>
         /// <param name="fb_id"></param>
         /// <param name="pin"></param>
         /// <returns></returns>
-        public static bool findNode(string input, string key, int start, string fb_id, ref PinsModels pin)
+        public static bool findNode(string input, string key, int start, string fb_id, byte type, ref PinsModels pin)
         {
             var jsonfeedbacktarget = findElement(input, "feedbacktarget", 0);
             if (string.IsNullOrEmpty(jsonfeedbacktarget))
@@ -689,6 +798,10 @@ namespace CMS_Shared.Utilities
                     pin.sharecount = dobj.sharecount;
                     pin.reactioncount = dobj.reactioncount;
                     pin.ID = dobj.entidentifier;
+
+                    
+                    findNodeHtml(input, type, ref pin);
+                    
                     return true;
                     //if (fb_id.Equals(dobj.entidentifier))
                     //{
@@ -724,31 +837,35 @@ namespace CMS_Shared.Utilities
             var ret = "";
             try
             {
-                start = _input.IndexOf(key);
-                if (start > 0)
+                if(!string.IsNullOrEmpty(_input))
                 {
-                    var countLeftBreak = 0;
-                    var iEnd = 0;
-                    start = _input.IndexOf('{', start);
-                    for (int i = start; i < _input.Length; i++)
+                    start = _input.IndexOf(key);
+                    if (start > 0)
                     {
-                        char ch = _input[i];
-                        if (ch == '}')
+                        var countLeftBreak = 0;
+                        var iEnd = 0;
+                        start = _input.IndexOf('{', start);
+                        for (int i = start; i < _input.Length; i++)
                         {
-                            countLeftBreak--;
-                            if (countLeftBreak == 0)
+                            char ch = _input[i];
+                            if (ch == '}')
                             {
-                                iEnd = i;
-                                break;
+                                countLeftBreak--;
+                                if (countLeftBreak == 0)
+                                {
+                                    iEnd = i;
+                                    break;
+                                }
                             }
+                            else if (ch == '{')
+                                countLeftBreak++;
                         }
-                        else if (ch == '{')
-                            countLeftBreak++;
-                    }
 
-                    if (iEnd > start)
-                        ret = _input.Substring(start, iEnd - start + 1);
+                        if (iEnd > start)
+                            ret = _input.Substring(start, iEnd - start + 1);
+                    }
                 }
+                
             }
             catch (Exception ex) {
                 NSLog.Logger.Error("findElement:", ex);
@@ -913,6 +1030,7 @@ namespace CMS_Shared.Utilities
         public jsmods jsmods { get; set; }
         public string id { get; set; }
         public string unit_id_result_id { get; set; }
+        public string __html { get; set; }
     }
 
     public class jsmods

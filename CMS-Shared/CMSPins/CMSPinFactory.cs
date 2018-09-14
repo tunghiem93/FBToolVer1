@@ -18,7 +18,7 @@ namespace CMS_Shared.CMSEmployees
     {
         private static Semaphore m_Semaphore = new Semaphore(1, 1); /* semaphore for create pin data */
 
-        public bool CreateOrUpdate(List<PinsModels> lstPin, string KeyWordID, string createdBy, ref string msg)
+        public bool CreateOrUpdate(List<PinsModels> lstPin, string KeyWordID, string createdBy,string KeyWord, ref string msg)
         {
             NSLog.Logger.Info("CreateOrUpdatePin: " + KeyWordID, lstPin.Count);
             var result = true;
@@ -84,12 +84,13 @@ namespace CMS_Shared.CMSEmployees
                             UpdatedDate = DateTime.Now,
                             DayCount = 1,
                             Type = pin.Type,
-                            LinkVideo = pin.LinkVideo
+                            LinkVideo = pin.LinkVideo,
+                            KeyWord = KeyWord
                         });
 
                     }
                     if (listInsertDB.Count > 0)
-                        _db.CMS_Pin.AddRange(listInsertDB);
+                       _db.CMS_Pin.AddRange(listInsertDB);
 
                     //_db.SaveChanges();
                     /* TABLE KEYWORD_PIN */
@@ -250,7 +251,8 @@ namespace CMS_Shared.CMSEmployees
                         sharecount = o.ShareCount,
                         Description = o.Description,
                         DayCount = o.DayCount,
-                        OwnerName = o.OwnerName
+                        OwnerName = o.OwnerName,
+                        KeyWord = o.KeyWord,
                         //LastTime = CommonHelper.GetDurationFromNow(o.UpdatedDate),
                     }).ToList();
                 }
