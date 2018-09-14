@@ -746,7 +746,11 @@ namespace CMS_Shared.Utilities
                     if(tagAvatar != null)
                     {
                         var avatar = tagAvatar.GetAttributeValue("src", "");
-                        pin.AvatarUrl = avatar;
+                        if (!string.IsNullOrEmpty(avatar))
+                        {
+                            avatar = avatar.Replace("amp;", "");
+                            pin.AvatarUrl = avatar;
+                        }
                     }
                 }
             }
