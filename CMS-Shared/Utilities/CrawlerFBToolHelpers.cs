@@ -762,9 +762,9 @@ namespace CMS_Shared.Utilities
             try
             {
                 var html = findElement(input, "image", 0);
-                if(!string.IsNullOrEmpty(html) && html.Contains("dimensions"))
+                if(!string.IsNullOrEmpty(html))
                 {
-                    if (!string.IsNullOrEmpty(html))
+                    if (html.Contains("dimensions"))
                     {
                         var serializer = new JavaScriptSerializer();
                         dynamic objs = serializer.Deserialize(html, typeof(object));
@@ -803,11 +803,11 @@ namespace CMS_Shared.Utilities
                             }
                         }
                     }
-                }
-                else
-                {
-                    input = input.Replace(html, "");
-                    findImage(input, ref pin);
+                    else
+                    {
+                        input = input.Replace(html, "");
+                        findImage(input, ref pin);
+                    }
                 }
 
             }

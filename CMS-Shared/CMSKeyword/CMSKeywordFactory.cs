@@ -443,17 +443,17 @@ namespace CMS_Shared.Keyword
                             /* crawler tab post */
                             var PageSize = Convert.ToInt32(Commons.PageSize);
                             var modelPost = new CMS_CrawlerModels();
-                            string q = "stories-public(stories-keyword("+keyWord.KeyWord+"))";
-                            string ref_path = "/search/str/"+keyWord.KeyWord+"/stories-keyword/stories-public";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post,_cookie, PageSize, ref modelPost);
+                            string q = "stories-public(stories-keyword(" + keyWord.KeyWord + "))";
+                            string ref_path = "/search/str/" + keyWord.KeyWord + "/stories-keyword/stories-public";
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post, _cookie, PageSize, ref modelPost);
                             NSLog.Logger.Info("done crawler tab post : ", modelPost.Pins.Count);
                             if (modelPost.Pins != null && modelPost.Pins.Any())
                                 model.Pins.AddRange(modelPost.Pins);
                             /* crawler tab people */
                             var modelPeople = new CMS_CrawlerModels();
-                            q = "stories-opinion(stories-keyword("+keyWord.KeyWord+"))";
-                            ref_path = "/search/str/"+keyWord.KeyWord+"/stories-keyword/stories-opinion";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People,_cookie, PageSize, ref modelPeople);
+                            q = "stories-opinion(stories-keyword(" + keyWord.KeyWord + "))";
+                            ref_path = "/search/str/" + keyWord.KeyWord + "/stories-keyword/stories-opinion";
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People, _cookie, PageSize, ref modelPeople);
                             NSLog.Logger.Info("done crawler tab people : ", modelPeople.Pins.Count);
                             if (modelPeople.Pins != null && modelPeople.Pins.Any())
                                 model.Pins.AddRange(modelPeople.Pins);
@@ -462,9 +462,9 @@ namespace CMS_Shared.Keyword
                             var modelPhoto = new CMS_CrawlerModels();
                             q = "photos-keyword(" + keyWord.KeyWord + ")";
                             ref_path = "/search/str/" + keyWord.KeyWord + "/photos-keyword";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "grid", (byte)Commons.EType.Photo, _cookie,70, ref modelPhoto);
-                            
-                          
+                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "grid", (byte)Commons.EType.Photo, _cookie, 70, ref modelPhoto);
+
+
 
                             /*crawler detail tab photo */
                             var options = new ParallelOptions { MaxDegreeOfParallelism = 10 };
@@ -485,15 +485,15 @@ namespace CMS_Shared.Keyword
                                 model.Pins = model.Pins.Where(o => o.Created_At >= lastdate && o.Created_At <= datenow).ToList();
                                 NSLog.Logger.Info("done crawler after 7 days ago : ", model.Pins.Count);
 
-                                Parallel.ForEach(model.Pins, options , pin =>
-                                 {
-                                     if(pin.Type != (byte)Commons.EType.Photo)
-                                     {
-                                         CrawlerFBToolHelpers.CrawlerDetail(pin.PhotoID, _cookie, (byte)Commons.EType.Post, ref pin);
-                                     }
-                                     
-                                 });
-                                
+                                Parallel.ForEach(model.Pins, options, pin =>
+                                {
+                                    if (pin.Type != (byte)Commons.EType.Photo)
+                                    {
+                                        CrawlerFBToolHelpers.CrawlerDetail(pin.PhotoID, _cookie, (byte)Commons.EType.Post, ref pin);
+                                    }
+
+                                });
+
                                 res = _fac.CreateOrUpdate(model.Pins, keyWord.ID, createdBy, keyWord.KeyWord, ref msg);
                             }
 
@@ -541,12 +541,20 @@ namespace CMS_Shared.Keyword
                     var keyWords = _db.CMS_KeyWord.Where(o => o.Status == (byte)Commons.EStatus.Active).OrderBy(o => o.Sequence).ToList();
                     if (keyWords != null)
                     {
-                        foreach (var key in keyWords)
+                        var options = new ParallelOptions { MaxDegreeOfParallelism = 10 };
+                        Parallel.ForEach(keyWords, options, key =>
                         {
                             var _msg = "";
                             LogHelper.WriteLogs(key.Sequence.ToString() + " " + key.KeyWord, key.ID);
                             CrawlData(key.ID, createdBy, ref _msg);
-                        }
+                        });
+
+                        //foreach (var key in keyWords)
+                        //{
+                        //    var _msg = "";
+                        //    LogHelper.WriteLogs(key.Sequence.ToString() + " " + key.KeyWord, key.ID);
+                        //    CrawlData(key.ID, createdBy, ref _msg);
+                        //}
                     }
                 }
                 LogHelper.WriteLogs("ResponseCrawlAllKeyWords", result.ToString());
