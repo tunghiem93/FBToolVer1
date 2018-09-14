@@ -12,7 +12,7 @@
         @foreach (var item in Model.Pins)
                 {
                     var ImageUrl = item.Images != null && item.Images.Count > 0 ? item.Images.FirstOrDefault().url : "";
-                    <div class="col-md-2 col-sm-2 col-xs-12" style="margin-bottom:20px;padding-top:10px;border:1px solid rgba(0,0,0,.1);border-radius:5px !important;height:500px; position: relative" id="@item.ID">
+                    <div class="col-md-2 col-sm-2 col-xs-12" style="margin-bottom:20px;padding-top:10px;border:1px solid rgba(0,0,0,.1);border-radius:5px !important;height:550px; position: relative" id="@item.ID">
                         <div style="margin-bottom:10px;">
                             @if (!string.IsNullOrEmpty(item.Link))
                             {
@@ -29,7 +29,7 @@
                                 </a>
                             }
                         </div>
-                        <div class="info">
+                        <div class="info" style="font-size: 13px !important; ">
                             <div style="text-align: center;">
                                 <table style="background-color:#e9ebee;height:35px;line-height:35px;border-radius:5px !important; margin-bottom: 5px !important; width: 100% ">
                                     <tr>
@@ -45,11 +45,14 @@
                             </div>
                             @if (item.Description != null && item.Description.Length > 0)
                             {
-                                <div style=" background-color:#d4edda;border-radius:5px !important; margin-bottom: -5px !important; padding-left: 5px; padding-right: 5px;height:100px; overflow: -webkit-paged-x;">
-                                    <p>@string.Format("{0}", !string.IsNullOrEmpty(item.Description) && item.Description.Length > 70 ? item.Description.Substring(0, 70) + "..." : item.Description)</p>
+                                <div style=" background-color:#d4edda;border-radius:5px !important; margin-bottom: -5px !important; padding-left: 5px; padding-right: 5px;height:150px; display: -webkit-box; overflow: overlay;">
+                                    <p>
+                                        @item.Description
+                                    @*@string.Format("{0}", !string.IsNullOrEmpty(item.Description) && item.Description.Length > 70 ? item.Description.Substring(0, 70) + "..." : item.Description)*@
+                                    </p>
                                 </div>
                             }
-                            <p style="background-color:#f8d7da;height:35px;line-height:35px;border-radius:5px !important;">&nbsp;&nbsp;<span style="color:#721c24;font-weight:bold">@item.UpdateDate.ToString("dd/MM/yyyy") &nbsp; @Html.Raw('-')&nbsp; @item.DayCount <i class="fa fa-clock-o" style="font-size:14px;"></i></span> </p>
+                            <p style="background-color:#f8d7da;height:35px;line-height:35px;border-radius:5px !important;text-align: center;">&nbsp;&nbsp;<span style="color:#721c24;font-weight:bold">@string.Format("{0}", !string.IsNullOrEmpty(item.KeyWord) ? item.KeyWord : "")</span> </p>
                         </div>
                     </div>
         }
