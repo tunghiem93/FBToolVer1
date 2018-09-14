@@ -720,8 +720,8 @@ namespace CMS_Shared.Utilities
                                                     && o.Attributes["class"].Value.Contains("hasCaption")).FirstOrDefault();
                     if (tagSpan != null)
                     {
-                        //pin.Description = tagSpan.InnerHtml;
-                        pin.Description = tagSpan.InnerText;
+                        pin.Description = tagSpan.InnerHtml;
+                       // pin.Description = tagSpan.InnerText;
                     }
 
                     if(string.IsNullOrEmpty(pin.OwnerName))
