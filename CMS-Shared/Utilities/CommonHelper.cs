@@ -129,6 +129,39 @@ namespace CMS_Shared.Utilities
                 totalDay -= (months * 30);
 
                 /* string format */
+                string formatted = string.Format("{0}{1}{2}{3}{4}",
+                                    years > 0 ? string.Format("{0:0}y ", years) : string.Empty,
+                                    months > 0 ? string.Format("{0:0}m ", months) : string.Empty,
+                                    years > 0 ? "" : totalDay > 0 ? string.Format("{0:0}d ", totalDay) : string.Empty,
+                                    months > 0 ? "" : span.Hours > 0 ? string.Format("{0:0}h ", span.Hours) : string.Empty,
+                                    totalDay > 0 ? "" : span.Minutes > 0 ? string.Format("{0:0}min ", span.Minutes) : string.Empty
+                                    );
+
+                ret += formatted;
+                //ret += " ago";
+            }
+            catch (Exception ex) { };
+            return ret;
+        }
+
+        public static string GetDurationPostFromNow(DateTime? dateUpdate)
+        {
+            var ret = "";
+            try
+            {
+                var span = (TimeSpan)(DateTime.Now - dateUpdate);
+                /* get total day */
+                int totalDay = span.Days;
+
+                /* get total year */
+                int years = totalDay / 365;
+                totalDay -= (years * 365);
+
+                /* get total months */
+                int months = totalDay / 30;
+                totalDay -= (months * 30);
+
+                /* string format */
                 string formatted = string.Format("{0}{1}{2}{3}{4}{5}",
                                     years > 0 ? string.Format("{0:0}y ", years) : string.Empty,
                                     months > 0 ? string.Format("{0:0}m ", months) : string.Empty,
