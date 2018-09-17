@@ -3,16 +3,16 @@
 @using CMS_Shared.Utilities
 <style>
     p{
-        margin:10px 0 !important;
+        margin:5px 0 !important;
     }
 </style>
 @if (Model != null && Model.Pins != null && Model.Pins.Any())
 {
     <div class="form-group" style="position: static; ">
         @foreach (var item in Model.Pins)
-                {
-                    var ImageUrl = item.Images != null && item.Images.Count > 0 ? item.Images.FirstOrDefault().url : "";
-                    <div class="col-md-2 col-sm-2 col-xs-12" style="margin-bottom:20px;padding-top:10px;border:1px solid rgba(0,0,0,.1);border-radius:5px !important;height:550px; position: relative" id="@item.ID">
+        {
+            var ImageUrl = item.Images != null && item.Images.Count > 0 ? item.Images.FirstOrDefault().url : "";
+                    <div class="col-md-2 col-sm-2 col-xs-12" style="margin-bottom:20px;padding-top:10px;border:1px solid rgba(0,0,0,.1);border-radius:5px !important;min-height:550px; position: relative; overflow: hidden" id="@item.ID">
                         <div style="margin-bottom:10px;">
                             @if (!string.IsNullOrEmpty(item.Link))
                             {
@@ -39,11 +39,11 @@
                                     </tr>
                                 </table>
                             </div>
-                            <div class="info-domain" style="background-color:#cce5ff;border-radius:1px !important;min-height:50px; vertical-align: middle; overflow: auto">
+                            <div class="info-domain" style="background-color:#cce5ff;border-radius:1px !important;height:50px; vertical-align: middle; overflow: hidden">
                                 <table>
                                     <tr>
-                                        <td style="padding-right: 10px; "><img src="@item.AvatarUrl" /></td>
-                                        <td style="font-size: 12px;"><a href="@string.Format("{0}",string.IsNullOrEmpty(item.Link) ? "javascript:void(0)" : item.Link)" style="color:#004085;font-weight:bold; text-decoration: none" target="_blank" title="@item.Link">@string.Format("{0}", !string.IsNullOrEmpty(item.OwnerName) && item.OwnerName.Length > 20 ? item.OwnerName.Substring(0, 20) + "..." : item.OwnerName)<span style="vertical-align: super;"><br />&nbsp;&nbsp; @item.Created_At.ToString("dd/MM/yyyy")</span></a></td>
+                                        <td style="padding-right: 5px; "><img src="@item.AvatarUrl" /></td>
+                                        <td style="font-size: 11px;"><a href="@string.Format("{0}", string.IsNullOrEmpty(item.Link) ? "javascript:void(0)" : item.Link)" style="color:#004085;font-weight:bold; text-decoration: none" target="_blank" title="@item.Link">@string.Format("{0}", !string.IsNullOrEmpty(item.OwnerName) && item.OwnerName.Length > 17 ? item.OwnerName.Substring(0, 17) + "..." : item.OwnerName)<span style="vertical-align: super;"><br />&nbsp;&nbsp; @item.Created_At.ToString("dd/MM/yyyy")</span></a></td>
                                     </tr>
                                 </table>
                             </div>
@@ -52,11 +52,18 @@
                                 <div style=" background-color:#d4edda;border-radius:5px !important; margin-bottom: -5px !important; padding-left: 5px; padding-right: 5px;height:150px; display: -webkit-box; overflow: overlay;">
                                     <p>
                                         @Html.Raw(item.Description)
-                                    @*@string.Format("{0}", !string.IsNullOrEmpty(item.Description) && item.Description.Length > 70 ? item.Description.Substring(0, 70) + "..." : item.Description)*@
+                                        @*@string.Format("{0}", !string.IsNullOrEmpty(item.Description) && item.Description.Length > 70 ? item.Description.Substring(0, 70) + "..." : item.Description)*@
                                     </p>
                                 </div>
                             }
-                            <p style="background-color:#f8d7da;height:35px;line-height:35px;border-radius:5px !important;text-align: center;">&nbsp;&nbsp;<span style="color:#721c24;font-weight:bold">@string.Format("{0}", !string.IsNullOrEmpty(item.KeyWord) ? item.KeyWord : "")</span> </p>
+                            <div style="text-align: center; margin-top: 9px;">
+                                <table style="background-color:#e9ebee;height:24px;line-height:24px;border-radius:5px !important; margin-bottom: 5px !important; width: 100% ">
+                                    <tr>
+                                        <td><span>@CommonHelper.GetDurationFromNow(item.CreatedDate) </span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p style="background-color:#f8d7da;height:25px;line-height:25px;border-radius:5px !important;text-align: center; font-size: 12px;">&nbsp;&nbsp;<span style="color:#721c24;font-weight:bold">@string.Format("{0}", !string.IsNullOrEmpty(item.KeyWord) && item.KeyWord.Length > 24 ? item.KeyWord.Substring(0, 24) + "..." : item.KeyWord)</span> </p>
                         </div>
                     </div>
         }
