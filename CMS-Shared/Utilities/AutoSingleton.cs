@@ -49,23 +49,24 @@ namespace CMS_Shared.Utilities
         {
             try
             {
-                var dateTimeNow = DateTime.UtcNow;
+                //var dateTimeNow = DateTime.UtcNow;
 
                 /* time in VN: GMT+7*/
-                dateTimeNow = dateTimeNow.AddHours(7);
+               // dateTimeNow = dateTimeNow.AddHours(7);
 
                 /* get time start timer */
-                var timeStart = Commons.TimerStartAt;
-                var dateStart = dateTimeNow.Date.AddHours(timeStart);
-                if (dateStart < dateTimeNow)/* start at next date */
-                {
-                    dateStart = dateStart.AddDays(1); /* */
-                }
+                //var timeStart = Commons.TimerStartAt;
+               // var dateStart = dateTimeNow.Date.AddHours(timeStart);
+               // if (dateStart < dateTimeNow)/* start at next date */
+               // {
+                   // dateStart = dateStart.AddDays(1); /* */
+                //}
 
                 /* time span to sleep */
-                var timeSpan = dateStart - dateTimeNow;
-                LogHelper.WriteLogs("WaitForNextDate", dateStart.ToString());
-                Thread.Sleep((int)timeSpan.TotalMilliseconds);
+                //var timeSpan = dateStart - dateTimeNow;
+                //LogHelper.WriteLogs("WaitForNextDate", dateStart.ToString());
+                Thread.Sleep(Commons.TimerInterval * 1000);
+				//Thread.Sleep(60 * 1000);
             }
             catch (Exception ex) { };
         }
@@ -75,6 +76,7 @@ namespace CMS_Shared.Utilities
             System.Timers.Timer aTimer = new System.Timers.Timer();
             aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
             aTimer.Interval = Commons.TimerInterval * 1000; /* (second*1000) = milisecond */
+		   //aTimer.Interval = 60 * 1000; //(test after 1p continue crawler)
             aTimer.Enabled = true;
 
             /* run first time */
