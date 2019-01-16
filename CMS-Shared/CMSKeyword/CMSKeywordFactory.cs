@@ -412,6 +412,9 @@ namespace CMS_Shared.Keyword
             var model = new CMS_CrawlerModels();
             var sequence = 0;
             var key = "";
+            var _cookie = "";
+            DateTime lastdate = DateTime.Now.AddDays(-7);
+            DateTime datenow = DateTime.Now;
 
             var result = true;
             try
@@ -439,13 +442,15 @@ namespace CMS_Shared.Keyword
 
                             var listAcc = _db.CMS_Account.Where(o => o.Status == (byte)Commons.EStatus.Active && o.IsActive && !string.IsNullOrEmpty(o.Cookies)).ToList();
                             var listCookie = listAcc.Select(x => x.Cookies).ToList();
-                            var _cookie = CommonHelper.RamdomCookie(listCookie);
+                            _cookie = CommonHelper.RamdomCookie(listCookie);
                             /* crawler tab post */
                             var PageSize = Convert.ToInt32(Commons.PageSize);
                             var modelPost = new CMS_CrawlerModels();
-                            string q = "stories-public(stories-keyword(" + keyWord.KeyWord + "))";
+                            string q = "keywords_search(" + keyWord.KeyWord.Replace(" ", "+") + ")";
                             string ref_path = "/search/str/" + keyWord.KeyWord + "/stories-keyword/stories-public";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post, _cookie, PageSize, ref modelPost);
+                            //CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.Post, _cookie, PageSize, ref modelPost);
+                            //string q = "stories-public(stories-keyword(" + keyWord.KeyWord + "))";
+                            //string ref_path = "/search/str/" + keyWord.KeyWord + "/stories-keyword/stories-public";
                             NSLog.Logger.Info("done crawler tab post : ", modelPost.Pins.Count);
                             if (modelPost.Pins != null && modelPost.Pins.Any())
                                 model.Pins.AddRange(modelPost.Pins);
@@ -453,21 +458,26 @@ namespace CMS_Shared.Keyword
                             var modelPeople = new CMS_CrawlerModels();
                             q = "stories-opinion(stories-keyword(" + keyWord.KeyWord + "))";
                             ref_path = "/search/str/" + keyWord.KeyWord + "/stories-keyword/stories-opinion";
-                            CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People, _cookie, PageSize, ref modelPeople);
+                            //CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "list", (byte)Commons.EType.People, _cookie, PageSize, ref modelPeople);
                             NSLog.Logger.Info("done crawler tab people : ", modelPeople.Pins.Count);
                             if (modelPeople.Pins != null && modelPeople.Pins.Any())
                                 model.Pins.AddRange(modelPeople.Pins);
 
                             /* crawler tab photo */
                             var modelPhoto = new CMS_CrawlerModels();
-                            q = "photos-keyword(" + keyWord.KeyWord + ")";
-                            ref_path = "/search/str/" + keyWord.KeyWord + "/photos-keyword";
+                            q = "photos-keyword(" + keyWord.KeyWord.Replace(" ", "+") + ")";
+                            ref_path = "/search/str/" + keyWord.KeyWord.Replace(" ", "+") + "/photos-keyword";
                             CrawlerFBToolHelpers.CrawlerNow(q, ref_path, "grid", (byte)Commons.EType.Photo, _cookie, 70, ref modelPhoto);
 
 
 
                             /*crawler detail tab photo */
+                            PinsModels refmodelPhoto = new PinsModels();
                             var options = new ParallelOptions { MaxDegreeOfParallelism = 10 };
+                            //for (int i = 0; i < modelPhoto.Pins.Count; i++)
+                            //{
+                            //    CrawlerFBToolHelpers.CrawlerDetail(modelPhoto.Pins[i].PhotoID, _cookie, (byte)Commons.EType.Photo, ref refmodelPhoto);
+                            //}
                             Parallel.ForEach(modelPhoto.Pins, options, pin =>
                             {
                                 CrawlerFBToolHelpers.CrawlerDetail(pin.PhotoID, _cookie, (byte)Commons.EType.Photo, ref pin);
@@ -475,8 +485,6 @@ namespace CMS_Shared.Keyword
                             NSLog.Logger.Info("done crawler tab photo : ", modelPhoto.Pins.Count);
                             if (modelPhoto.Pins != null && modelPhoto.Pins.Any())
                                 model.Pins.AddRange(modelPhoto.Pins);
-                            var lastdate = DateTime.Now.AddDays(-7);
-                            var datenow = DateTime.Now;
                             var res = false;
                             if (model.Pins.Count > 0)
                             {

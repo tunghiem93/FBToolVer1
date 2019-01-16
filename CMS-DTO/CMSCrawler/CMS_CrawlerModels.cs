@@ -47,6 +47,7 @@ namespace CMS_DTO.CMSCrawler
         public string PhotoID { get; set; }
         public string KeyWord { get; set; }
         public string AvatarUrl { get; set; }
+        public string Ajaxify { get; set; }
         public PinsModels()
         {
             Board = new BoardModels();

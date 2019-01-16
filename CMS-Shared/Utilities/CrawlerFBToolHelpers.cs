@@ -26,7 +26,7 @@ namespace CMS_Shared.Utilities
                     String timeStamp = DateTime.Now.ToString("yyyyMMddHHmmssffff");
                     var obj = _search_keyword_payload(q, ref_path, view,i,cursor);
                     var userID = GetUserIDFromCookies(cookie);
-                    var url = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrollingSetPagelet?dpr=1&data=" + obj + "&__user="+ userID + "&__a=1&__be=1&__pc=PHASED:DEFAULT&__spin_t=" + timeStamp + "";
+                    var url = "https://www.facebook.com/ajax/pagelet/generic.php/BrowseScrollingSetPagelet?fb_dtsg_ag=AQw3bK517l5A19pMygjS1seIX_xdd_5J9J8RDNhzeYBrFQ:AQz_YUynNTf9aVlxbcq5CEJmLj-BCsRdEHuHxWU7jDIa1A&data=" + obj + "&__user="+ userID + "&__a=1&__be=1&__pc=PHASED%3Aufi_home_page_pkg&dpr=1&__spin_t=" + timeStamp + "";
                     Uri uri = new Uri(url);
                     var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
                     httpWebRequest.Accept = "*/*";
@@ -395,11 +395,11 @@ namespace CMS_Shared.Utilities
                 doc.LoadHtml(html);
                 var _mHtml = doc.DocumentNode.Descendants()
                                              .Where(x => (x.Name == "div" && x.Attributes["class"] != null &&
-                                                   x.Attributes["class"].Value.Contains("_5bl2 _3u1 _41je _440e"))).ToList();
+                                                   x.Attributes["class"].Value.Contains("_5bl2 _3u1 _41je"))).ToList();
 
-                //var _mHtml = doc.DocumentNode.Descendants()
+                //var team = doc.DocumentNode.Descendants()
                 //                             .Where(x => (x.Name == "div" && x.Attributes["class"] != null &&
-                //                                   x.Attributes["class"].Value.Contains("_401d"))).ToList();
+                //                                   x.Attributes["class"].Value.Contains("_5t31"))).ToList();
 
                 if (_mHtml != null && _mHtml.Any())
                 {
@@ -592,6 +592,15 @@ namespace CMS_Shared.Utilities
                         }
                         /* end get id post */
 
+
+                        /* start get ajaxify post */
+                        var ajaxify = mItem.SelectSingleNode("//a").Attributes["href"].Value;
+                        if (!string.IsNullOrEmpty(ajaxify))
+                        {
+                            pin.Ajaxify = ajaxify;
+                        }
+                        /* end get ajaxify post */
+
                         /*start get image url */
                         var _mImg = mItem.Descendants("img").Where(o => o.Attributes["class"] != null && o.Attributes["class"].Value.Contains("scaledImageFitHeight")).ToList();
                         if(_mImg != null && _mImg.Any())
@@ -640,7 +649,7 @@ namespace CMS_Shared.Utilities
             try
             {
                 var userID = GetUserIDFromCookies(cookie);
-                var Url = "https://www.facebook.com/ajax/pagelet/generic.php/PhotoViewerInitPagelet?dpr=1&fb_dtsg_ag=AdwP2CkmxqbthyUwtuNGyntNwoZnRqeWS0c-ybaoDCyvqg%3AAdxaAcHQyTfiHpCrGBxNeQxTkMKM_AQsNq70bpE_Vat-gQ&ajaxpipe=1&ajaxpipe_token=AXhBRNxR61W2G51W&no_script_path=1&data={\"fbid\":"+fbId+",\"set\":\"p."+fbId+"\",\"type\":\"1\",\"theater\":null,\"firstLoad\":true,\"ssid\":1536763892151}&__user="+ userID + "&__a=1&__dyn=7AgNe-4amaxx2u6Xolg9obHGiqEW8xdLFwxx-6EeAq2i5U4e2C3-7WyUcWwIKaxeUW3Kag4idwJx64e3W9xicwJwpUiwBx61zwzwno8o2fDBw9-6rGUogc8rwFwgE467Uy2adwRwGxO4p8gy85Ofy946e4oC2bixK8Cgepo-cGcBK2C6U4W10Gu15ghyEgx2UTwEwFyFE-3e4U9ogwJw&__req=jsonp_2&__be=1&__pc=PHASED%3ADEFAULT&__rev=4303580&__spin_r=4303580&__spin_b=trunk&__spin_t=1536763736&__adt=2";
+                var Url = "https://www.facebook.com/ajax/pagelet/generic.php/PhotoViewerInitPagelet?fb_dtsg_ag=AQw3bK517l5A19pMygjS1seIX_xdd_5J9J8RDNhzeYBrFQ%3AAQz_YUynNTf9aVlxbcq5CEJmLj-BCsRdEHuHxWU7jDIa1A&ajaxpipe=1&ajaxpipe_token=AXhs70WS3h-jUguk&no_script_path=1&data={\"fbid\":" + fbId+",\"set\":"+ "basw.AbqkquaAgXctThHdmcosHPUafqQmv0OxXXRwmDS_buPYfxbU8EwkqqaPLsi6ovu8XxNJ4mut7SpgQIABk44hvQh9GbI92lbaKR0mbw6YUywaaICL23IbvFe5c4w2olxDWkmNiQlzN0uHfMoE7yiXgGmxCqYLNDA6hfK6rkssuqI3Xw.806172092868409.316267845888715.1956280594479096.2141563649235805.1859356954153904.2225105087767426.241732080071930.1512166465487459.10156252944308528" + ",\"opaqueCursor\":Abp9Cu3bESUbwW8ssIm-hhg_PyqFFyvrtrHqu_puKs1hbLwQM9VeuyQ5jgt101rkrhMbS_lhy6emSqJNkSDFJMVVQJd7Ibp8aqy3FF6w6EG8JGTFGx291QoI32qSoe_5z28q0Jg--1YpeFBS-bXIbU4poWWFUsGoCQTZHwNwQtno3QlqVBIecebGz3IcpNaKjyoSbBcoy_7rZ7a1O_Ov9Cg8mbfVvrjpibY0xl_GhqUrJss2zXTJkjyjzi8EbhA4QtxrjMtxZvaYkgFcZruNj1jzuiQKF4px5aiXQ9WJ0X91Ika8RSaAz9bJo0s4SP1zez1waw4eh2K9atl1LzarRabTHvp5PbtkM3LnQuFQqehoeMhRUmqe1i6K6woe3WNJof7VKyAgiEUnrmPqKuXDUNzyAD6lMkQaxzqOSPYIjcTpdw2dV8JaRVlpWHrn11mf0Ku6nWk2vyiRN6NNN6zLMM6LCMd1tiEsDts4dA5YfCET4pEQ-miQVqK2A_d1BcFIpVFizs1uxAOnyy4xJIYvlQf8kDOoD4WsccAyqveh0CYM_PP1HcCM6PUPH6D4-NjZ-WihWHo71BnDD4mirBMhJnlnOHU0q2ngUtQKGq6Kp1h9OoKfqXMISl2zt3UcjPZqnvTlYwzhwBa0YgGbekcMJxebI1BENgmN49-6OEIsc_aL7Pw4i-pzEuXX-gyBy6P_FyK7u40n3zr7wrT_HB79WkVAmeaqnUhMOYFAJy7wwSLMFw,\"type\":\"1\",\"external_log_id\":null,\"player_origin\":null,\"firstLoad\":true,\"ssid\":1547558635384}&__user=" + userID + "&__a=1&__dyn=7AgNe-4amaxx2u6aJGeFxqewRyWzEy4aheC267Uqzob4q2i5U4e2DwZx-EK6UnG2OUG4XzEeWDwUyKdwJx64e2p1rDxicxu5od8cEiwBx61zwzU5KEuxm1VDBwm88o98pKEsgoxu6Uao4a3mbx-2KdUcUaK6AeKEgy85OcGdhUix69wyQEry9m4-8xGmfzaG9BKm4U-4Kq7oqxm3i8GEnUpxCbh4im4eeKi8wGxm4UGqbK3e4UyUoG5E98dQeCUO5AbxS227Ua8&__req=fetchstream_8&__be=1&__pc=PHASED%3Aufi_home_page_pkg&dpr=1&__rev=4681729&jazoest=27837&__spin_r=4681729&__spin_b=trunk&__spin_t=1547442817&__adt=8&ajaxpipe_fetch_stream=1";
                 Uri uri = new Uri(Url);
                 var httpWebRequest = (HttpWebRequest)WebRequest.Create(uri);
                 httpWebRequest.Headers["Cookie"] = cookie; //"fr=0g932KaBNIHkPNSHd.AWUalQQ9AxXL7JpoqimmeZTMmkg.BbMcZu.uD.AAA.0.0.Bbky_F.AWW4mfhc; sb=NmI3W-ffluEtyFHleEWSjhBl; datr=NmI3WwtbosYtTwDtslqJtXZd; wd=1920x944; c_user=100003727776485; xs=38%3AjT_REhmug5Jgrg%3A2%3A1536224023%3A6091%3A726; pl=n; spin=r.4289044_b.trunk_t.1536328620_s.1_v.2_; presence=EDvF3EtimeF1536372678EuserFA21B03727776485A2EstateFDutF1536372678743CEchFDp_5f1B03727776485F2CC; act=1536372716538%2F11";
@@ -964,6 +973,8 @@ namespace CMS_Shared.Utilities
                     source_session_id = null,
                     preloaded_entity_ids = new List<string>(),
                     preloaded_entity_type = null,
+                    entry_point_action = "SEARCH_BOX",
+                    serp_decider_outcome = null,
                     //high_confidence_argument = null,
                     //logging_unit_id = "browse_serp:6706cad3-e6df-6703-faf1-e4c36f7ed42d",
                     //query_title = null,
@@ -982,7 +993,7 @@ namespace CMS_Shared.Utilities
                     //impression_id = "0hWqPapNXiSUGrXig",
                     experience_type = "grammar",
                     //ref_path = ref_path,
-                    //ref_path = "/search/str/Awesome+T-shirt/photos-keyword",
+                    ref_path = "/search/top/",
                     exclude_ids = null,
                     browse_location = "browse_location:browse",
                     //trending_source = null,
@@ -1027,6 +1038,7 @@ namespace CMS_Shared.Utilities
         public bool disable_main_browse_unicorn { get; set; }
         public string entry_point_scope { get; set; }
         public string entry_point_surface { get; set; }
+        public string entry_point_action { get; set; }
         public List<string> squashed_ent_ids { get; set; }
         public string source_session_id { get; set; }
         public List<string> preloaded_entity_ids { get; set; }
@@ -1035,6 +1047,7 @@ namespace CMS_Shared.Utilities
         public string logging_unit_id { get; set; }
         public string query_title { get; set; }
         public string query_source { get; set; }
+        public string serp_decider_outcome { get; set; }
     }
 
     public class enc_q
